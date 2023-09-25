@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nexus: Voidwarpers - Landing Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container-lg">
+      <a class="navbar-brand" href="index.html">NEXUS: VOIDWARPERS</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html"><i class="bi bi-house-door"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="rules.html"><i class="bi bi-dice-3"></i> Game Rules</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cards.html"><i class="bi bi-files"></i> Cards</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://discord.gg/cBkYUbsMKk" target="_blank"><i class="bi bi-discord"></i> Join the Discord</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <div class="container-md bg-dark">
+      <div class="row">
+        <div class="col-6">
+          <!-- CARD RENDER -->
+          <div class="card-container card-radius mt-5 mb-5">
+            <div class="card-background card-bg-default">
+              <div class="card-frame">
+                <div class="frame-header frame-color-default">
+                  <p class="card-name">Card Name</p>
+                  <!-- Cost Symbols -->
+                  <div class="card-cost">
+                    <img class="img-fluid card-cost-icon" src="images/icons/Number=0.png" alt="...">
+                    <img class="img-fluid card-cost-icon" src="images/icons/Energy=Colorless.png" alt="...">
+                  </div>
+                </div>
+        
+                <!-- Art Box -->
+                <div class="frame-art">
+                  <img class="img-fluid card-art" src="images/art/nexus-voidwarpers-dimlit-dunes.png" alt="...">
+                </div>
+    
+                <div class="frame-type-line frame-color-default">
+                  <p class="card-type">Type — Subtype</p>
+                  <img class="img-fluid card-set-icon" src="images/icons/Style=Medal, Quality=Prime.png" alt="...">
+                </div>
+        
+                <div class="frame-text-box text-box-color-default">
+                  <p class="description ftb-inner-margin">Card text</p>
+                  <p class="description">Card text</p>
+                  <p class="flavor-text">Card text</p>
+                </div>
+
+                <div class="frame-stats text-box-color-default">
+                  <p>0/0</p>
+                </div>
+        
+                <div class="frame-bottom-info inner-margin">
+                  <div class="fbi-left">
+                    <p>Creator</p>
+                  </div>
+          
+                  <div class="fbi-right">
+                    &#x99; &amp; &#169; 2023 Nexus: Voidwarpers
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+        <!-- CARD GENERATOR -->
+        <div class="col-6 p-3 rounded bg-light">
+          <h1>Card Generator</h1>
+          <h2>Text goes here</h2>
+          <div class="card-generator-container">
+            <label for="openai-prompt">OpenAI Prompt:</label>
+            <input type="text" id="openai-prompt" name="openai-prompt">
+            <button type="button" onclick="generateCard()">Generate Card</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- JS -->
+  <script src="index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

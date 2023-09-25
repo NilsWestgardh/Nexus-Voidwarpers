@@ -1,0 +1,3467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- HEAD -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nexus: Voidwarpers - Rules</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <!-- BODY -->
+  <body class="bg-light">
+    
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container-lg">
+        <a class="navbar-brand" href="#">NEXUS: VOIDWARPERS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html"><i class="bi bi-house-door"></i> Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="rules.html"><i class="bi bi-dice-3"></i> Game Rules</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cards.html"><i class="bi bi-files"></i> Cards</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://discord.gg/cBkYUbsMKk" target="_blank"><i class="bi bi-discord"></i> Join the Discord</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- HEADER -->
+    <header>
+      <!-- Full-width Image -->
+      <div class="header-img">
+        <img src="images/art/nexus-voidwarpers-channeling-chamber.png" alt="..." class="img-fluid w-100">
+      </div>
+    
+      <!-- Header Content -->
+      <div class="container mt-5">
+        <!-- Pills -->
+        <div class="d-flex justify-content-start my-3">
+          <span class="badge bg-primary mx-1 py-2 px-3 custom-pill-header">AI-enabled</span>
+          <span class="badge bg-primary mx-1 py-2 px-3 custom-pill-header">User-generated</span>
+          <span class="badge bg-primary mx-1 py-2 px-3 custom-pill-header">Digital trading card game</span>
+        </div>
+    
+        <!-- Headline and Paragraphs -->
+        <div class="my-4">
+          <h1 class="display-4 font-800">Nexus: Voidwarpers — Game Rules</h1>
+          <p class="lead p-lg font-400">Nexus: Voidwarpers is a digital UGCG (User Generated Card Game) where players not only play and trade cards like in other TCGs (Trading Card Games) but make cards as well. With the power of generative AI, players can quickly bring their card ideas to life and add them to the game.</p>
+          <p class="lead p-lg font-400">Nexus is designed to feel familiar, so veteran TCG players can just jump in and play. It doesn’t over-innovate on game mechanics but still manages to introduce solutions to long-standing pains that ruin the Magic of some TCGs.</p>
+        </div>
+      </div>
+      
+      <!-- Table of Content -->
+      <div class="container-md">
+        <div class="p-4 my-2 bg-white rounded section section-shadow5">
+          <h2 class="mb-4 mb-0 text-uppercase font-weight-bold">Table of Content</h2>
+          <div class="row">
+            <!-- Column 1 -->
+            <div class="col-lg-4 col-md-6">
+              <ol class="list-unstyled">
+                <li>
+                  <h3 class="text-primary mt-3"><a href="#section1.1">Section 1: The Basics</a></h3>
+                  <ol>
+                    <li class="pl-3"><a href="#section1.1">Introduction to Nexus: Voidwarpers</a></li>
+                    <li class="pl-3"><a href="#section1.2">Five Colors</a></li>
+                    <li class="pl-3"><a href="#section1.3">Sources</a></li>
+                    <li class="pl-3"><a href="#section1.4">Parts of a Card</a></li>
+                    <li class="pl-3"><a href="#section1.5">Card Types</a></li>
+                    <li class="pl-3"><a href="#section1.6">Game Zones</a></li>
+                  </ol>
+                </li>
+                <li>
+                  <h3 class="text-primary mt-3"><a href="#section2">Section 2: The Building Blocks</a></h3>
+                  <ol>
+                    <li class="pl-3"><a href="#section2.1">Making Energy</a></li>
+                    <li class="pl-3"><a href="#section2.2">Warping</a></li>
+                    <li class="pl-3"><a href="#section2.3">Tapping</a></li>
+                    <li class="pl-3"><a href="#section2.4">Scripts</a></li>
+                    <li class="pl-3"><a href="#section2.5">Abilities</a></li>
+                    <li class="pl-3"><a href="#section2.6">Winning the Game</a></li>
+                    <li class="pl-3"><a href="#section2.7">Attacking and Defending</a></li>
+                    <li class="pl-3"><a href="#section2.8">Example of Combat</a></li>
+                    <li class="pl-3"><a href="#section2.9">The Override Rule</a></li>
+                  </ol>
+                </li>
+              </ol>
+            </div>
+            <!-- Column 2 -->
+            <div class="col-lg-4 col-md-6">
+              <ol class="list-unstyled">
+                <li>
+                  <h3 class="text-primary mt-3"><a href="#section3">Section 3: Playing the Game</a></h3>
+                  <ol>
+                    <li class="pl-3"><a href="#section3.1">Start the Game</a></li>
+                    <li class="pl-3"><a href="#section3.2">Parts of the Turn</a></li>
+                    <li class="pl-3"><a href="#section3.3">The Next Turn</a></li>
+                  </ol>
+                </li>
+                <li>
+                  <h3 class="text-primary mt-3"><a href="#section4">Section 4: Creating and Customizing</a></h3>
+                  <ol>
+                    <li class="pl-3"><a href="#section4.1">Building Your Deck</a></li>
+                    <li class="pl-3"><a href="#section4.2">Formats</a></li>
+                    <li class="pl-3"><a href="#section4.3">Sets</a></li>
+                    <li class="pl-3"><a href="#section4.4">Custom Cards</a></li>
+                    <li class="pl-3"><a href="#section4.5">Sharing Your Card</a></li>
+                    <li class="pl-3"><a href="#section4.6">Playing Your Card</a></li>
+                    <li class="pl-3"><a href="#section4.7">Making Money From Your Card</a></li>
+                  </ol>
+                </li>
+              </ol>
+            </div>
+            <!-- Column 3 -->
+            <div class="col-lg-4 d-none d-lg-block">
+              <ol class="list-unstyled">
+                <li>
+                  <h3 class="text-primary mt-3"><a href="#section5">Section 5: Game Lore</a></h3>
+                  <ol>
+                    <li class="pl-3"><a href="#section5.1">Themes</a></li>
+                    <li class="pl-3"><a href="#section5.2">Background</a></li>
+                    <li class="pl-3"><a href="#section5.3">Characters</a></li>
+                    <li class="pl-3"><a href="#section5.4">Planets</a></li>
+                    <li class="pl-3"><a href="#section5.5">Entities</a></li>
+                  </ol>
+                </li>
+                <li>
+                  <h3 class="text-primary mt-3"><a href="#section6">Section 6: Glossary</a></h3>
+                  <ol>
+                    <li class="pl-3"><a href="#section6.1">Glossary Directory</a></li>
+                  </ol>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <!-- MAIN PAGE CONTENT -->
+    <main class="container-fluid">
+      <!-- Main Medium Container -->
+      <div class="container-md">
+        <!-- SECTION 1: THE BASICS - 1. Introduction to Nexus: Voidwarpers -->
+        <div class="p-4 my-2 bg-white rounded section section-shadow">
+          <p class="text-muted">SECTION 1.1</p>
+          <h2 id="section1.1">The Basics</h2>
+          <p>Nexus: Voidwarpers is a strategy game played by two or more players, each having a customized deck of Nexus cards. During the game, each player takes turns playing cards of various types to defeat their opponents. You win by reducing your opponent's health to 0!</p>
+        </div>
+    
+        <!-- SECTION 1: THE BASICS - 2. Five Colors -->
+        <div class="p-4 my-2 bg-white rounded section">
+          <p class="text-muted">SECTION 1.2</p>
+          <h2 id="section1.2">Five Colors</h2>
+          <p>In Nexus, players play cards that are any of five colors, yellow, blue, purple, red, and green. Some cards have multiple colors. Some are even colorless. But each card, except sources, has an energy card cost. The cost must be paid to play the card. To produce energy, you need sources.</p>
+        </div>
+    
+        <!-- SECTION 1: THE BASICS - 3. Sources -->
+        <div class="p-4 my-2 bg-white rounded section">
+          <p class="text-muted">SECTION 1.3</p>
+          <div class="row my-4 ">
+            <h2 id="section1.3">Sources</h2>
+            <p>There are five base sources in Nexus, one for each color. They produce energy of that color.</p>
+          </div>
+
+          <!-- Source: Yellow Energy -->
+          <div class="row p-3 my-4 row p-3 my-4 section-sub">
+            <div class="col-md-8">
+              <h3>Radiant Source – Yellow Energy</h3>
+              <p>Yellow is the color of order, loyalty, and devotion. Radiant sources produce Yellow Energy that attracts Humans, Spirits, and Angels. Well-trained troops of synchronized smaller entities attack your enemies with deadly precision.</p>
+            </div>
+            <div class="col-md-4">
+              <img class="img-fluid nexus-card-radius shadow" src="images/cards/source-base--radiant.png" alt="radiant base source card">
+            </div>
+          </div>
+
+          <!-- Source: Blue Energy -->
+          <div class="row p-3 my-4 row p-3 my-4 section-sub">
+            <div class="col-md-8">
+              <h3>Electric Source – Blue Energy</h3>
+              <p>Blue is the color of deception, wisdom, and technology. Electric sources produce Blue Energy that attracts Androids, Glitches, and Sorcerers. Scheme to control the fate of your opponents in each battle before it even begins.</p>
+            </div>
+            <div class="col-md-4">
+              <img class="img-fluid nexus-card-radius shadow" src="images/cards/source-base--electric.png" alt="electric base source card">
+            </div>
+          </div>
+
+          <!-- Source: Purple Energy -->
+          <div class="row p-3 my-4 row p-3 my-4 section-sub">
+            <div class="col-md-8">
+              <h3>Dark Source – Purple Energy</h3>
+              <p>Purple is the color of death, the unknown, and the merciless methods of glory. Dark sources produce Purple Energy that attracts Mindweavers, Zombies, and Parasites. Use any means at your disposal to defeat your enemy.</p>
+            </div>
+            <div class="col-md-4">
+              <img class="img-fluid nexus-card-radius shadow" src="images/cards/source-base--dark.png" alt="dark base source card">
+            </div>
+          </div>
+
+          <!-- Source: Red Energy -->
+          <div class="row p-3 my-4 row p-3 my-4 section-sub">
+            <div class="col-md-8">
+              <h3>Thermal Source – Red Energy</h3>
+              <p>Red is the color of intensity, destruction, and the fanatic pursuit of victory. Thermal sources produce Red Energy that attracts Dragons, Warriors, and Worms. Channel your rage to lay waste to your opponents with devastating attacks.</p>
+            </div>
+            <div class="col-md-4">
+              <img class="img-fluid nexus-card-radius shadow" src="images/cards/source-base--thermal.png" alt="thermal base source card">
+            </div>
+          </div>
+
+          <!-- Source: Green Energy -->
+          <div class="row p-3 my-4 row p-3 my-4 section-sub">
+            <div class="col-md-8">
+              <h3>Chemical Source – Green Energy</h3>
+              <p>Green is the color of biology, growth, and the ruthless stomping of your enemies. Chemical sources produce Green Energy that attracts Trees, Elves, and Mutants. Command nature across the universe to smash the opposition.</p>
+            </div>
+            <div class="col-md-4">
+              <img class="img-fluid nexus-card-radius shadow" src="images/cards/source-base--chemical.png" alt="chemical base source card">
+            </div>
+          </div>
+
+          <!-- Source: Colorless Energy -->
+          <div class="row p-3 my-4 row p-3 my-4 section-sub">
+            <div class="col-md-8">
+              <h3>Colorless Energy</h3>
+              <p>Red is the color of intensity, destruction, and the fanatic pursuit of victory. Thermal sources produce Red Energy that attracts Dragons, Warriors, and Worms. Channel your rage to lay waste to your opponents with devastating attacks.</p>
+            </div>
+            <div class="col-md-4">
+              <img class="img-fluid nexus-card-radius shadow" src="images/cards/sources/source-channeling chamber.png" alt="colorless base source card">
+            </div>
+          </div>
+        </div>
+        
+        <!-- SECTION 1: THE BASICS - 4. Parts of a Card -->
+        <div class="p-4 my-2 bg-white rounded section">
+          <p class="text-muted">SECTION 1.4</p>
+          <div class="row my-4 ">
+            <h2 id="section1.4">Parts of a Card</h2>
+            <p>Every card in Nexus has a number of parts that let you know how to play it, what it does, and how to identify it. The exact parts any given card has may vary slightly, but all cards have a name, cost, artwork, type, quality, and set icon. Base sources don’t have a text box. Cards that aren’t entities or voidwarpers don’t have stats.</p>
+            <img class="img-fluid" src="images/CardAnatomy.png" alt="parts of a nexus: voidwarpers card">
+          </div>
+
+          <!-- Parts of Card: Card Name -->
+          <div class="row p-3 my-4 row p-3 my-4 section-sub">
+            <div class="row">
+              <div class="col-md-3">
+                <img class="img-fluid" src="images/.png" alt="...">
+              </div>
+              <div class="col-md-9">
+                <h3>Card Name</h3>
+                <p>Name refers to the name of a card or token. The name is displayed on the leftmost side of the card’s name and type line, which in turn sits at the top of the card. Each card’s name helps players identify the card. The name also elevates the card's flavor and connects it to the game’s lore. Mythic entities and voidwarpers follow a “name” naming convention: [Name], [Characteristic]. For example, this voidwarper: “Aria, Nova Prime”</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Parts of Card: Artwork -->
+          <div class="row p-3 my-4 row p-3 my-4 section-sub">
+            <div class="row">
+              <div class="col-md-3">
+                <img class="img-fluid" src="images/.png" alt="...">
+              </div>
+              <div class="col-md-9">
+                <h3>Artwork</h3>
+                <p>Artwork refers to the art on the card. The card’s artwork sits below the card’s name and cost line. Each card’s artwork helps players identify the card. The artwork also elevates the card's flavor and connects it to the game’s lore.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Parts of Card: Type Line -->
+          <div class="row p-3 my-4 row p-3 my-4 section-sub">
+            <div class="row">
+              <div class="col-md-3">
+                <img class="img-fluid" src="images/.png" alt="...">
+              </div>
+              <div class="col-md-9">
+                <h3>Type Line</h3>
+                <p>The type line sits underneath the card’s artwork, and above its text box. The cards card types, and its set symbol are displayed here. The card types are displayed on the leftmost side.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Parts of Card: Text Box -->
+          <div class="row p-3 my-4 row p-3 my-4 section-sub">
+            <div class="row">
+              <div class="col-md-3">
+                <img class="img-fluid" src="images/.png" alt="...">
+              </div>
+              <div class="col-md-9">
+                <h3>Text Box</h3>
+                <p>The text box usually makes up most of the lower section of a card. It’s where the card’s rule text and flavor text is displayed.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Parts of Card: Card Cost -->
+          <div class="row p-3 my-4 row p-3 my-4 section-sub">
+            <div class="row">
+              <div class="col-md-3">
+                <img class="img-fluid" src="images/.png" alt="...">
+              </div>
+              <div class="col-md-9">
+                <h3>Card Cost</h3>
+                <p>Card cost refers to the default energy cost to play the card. The energy cost of the card determines the card’s color. It also determines the card’s energy value. For example, a card with a card cost of (3)(Y)(B) is both yellow and blue, and its energy value is 5.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Parts of Card: Set Symbol -->
+          <div class="row p-3 my-4 row p-3 my-4 section-sub">
+            <div class="row">
+              <div class="col-md-3">
+                <img class="img-fluid" src="images/.png" alt="...">
+              </div>
+              <div class="col-md-9">
+                <h3>Set Symbol</h3>
+                <p>The set symbol is an icon located on the rightmost side of the card’s type line. The set symbol associates the card with a certain Nexus: Voidwarpers set. The icon also has one of four colors, indicating its quality: Common (black), Uncommon (silver), Rare (gold), and Prime (red).</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Parts of Card: Attack and Defense -->
+          <div class="row p-3 my-4 row p-3 my-4 section-sub">
+            <div class="row">
+              <div class="col-md-3">
+                <img class="img-fluid" src="images/.png" alt="...">
+              </div>
+              <div class="col-md-9">
+                <h3>Attack and Defense</h3>
+                <p>Attack and defense refer to how much damage an entity or craft card deals (first number), or needs to be dealt in a turn in order to be destroyed (second number). The attack and defense numbers are displayed in their own box at the bottom right of the card.
+          Only entity and craft cards have attack and defense.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Parts of Card: Allegiance -->
+          <div class="row p-3 my-4 row p-3 my-4 section-sub">
+            <div class="row">
+              <div class="col-md-3">
+                <img class="img-fluid" src="images/.png" alt="...">
+              </div>
+              <div class="col-md-9">
+                <h3>Starting Allegiance</h3>
+                <p>Starting allegiance denotes the number of allegiance counters a voidwarper starts with. Only voidwarper cards have a starting allegiance.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 1: THE BASICS - 5. Card Types -->
+        <div class="p-4 my-2 bg-white rounded section">
+          <p class="text-muted">SECTION 1.5</p>
+          <div class="row my-4 ">
+            <h2 id="section1.5">Card Types</h2>
+            <p>Every Nexus card has at least one type. A card’s type tells you when you can play the card and what happens after it is played. Each card is considered a script but not all cards are considered a permanent. The difference is that a permanent remains in battle.</p>
+          </div>
+
+          <!-- Card Type: Sequence -->
+          <div class="row p-3 my-4 row p-3 my-4 section-sub">
+            <div class="col-md-4">
+              <img class="img-fluid nexus-card-radius shadow" src="images/card-types/card-sequence.png" alt="Nexus: Voidwarpers sequence card">
+            </div>
+            <div class="col-md-8">
+              <h3>Sequence</h3>
+              <p>You can cast a sequence card only during one of your main phases of your own turns. You can’t play it when another card is on the stack. Once played, a sequence has its effect – meaning the instructions on the cards are executed – then put the card into your cache.</p>
+              <p><b>Card parts: </b>Name, cost, artwork, type, rarity, and text box.</p>
+            </div>
+          </div>
+
+          <!-- Card Type: Interrupt -->
+          <div class="row p-3 my-4 row p-3 my-4 section-sub">
+            <div class="col-md-4">
+              <img class="img-fluid nexus-card-radius shadow" src="images/card-types/card-interrupt.png" alt="Nexus: Voidwarpers interrupt card">
+            </div>
+            <div class="col-md-8">
+              <h3>Interrupt</h3>
+              <p>An interrupt is like a sequence, except you can play it at any time, even during your opponent’s turn or in response to another card being played. Like a sequence, an interrupt also has an effect, before being put into its owner's cache.</p>
+              <p><b>Card parts: </b>Name, cost, artwork, type, rarity, and text box.</p>
+            </div>
+          </div>
+
+          <!-- Card Type: Enhancement -->
+          <div class="row p-3 my-4 row p-3 my-4 section-sub">
+            <div class="col-md-4">
+              <img class="img-fluid nexus-card-radius shadow" src="images/card-types/card-enhancement.png" alt="Nexus: Voidwarpers enhancement card">
+            </div>
+            <div class="col-md-8">
+              <h3>Enhancement</h3>
+              <p>An enhancement is a permanent, meaning it can only be played any time you could play a sequence, and after it’s played it goes into the battlezone. Some enchantments have an additional card sub-type, like Augmentation and Story.</p>
+              <p>An Augmentation enters the battle attached to another permanent card and affects that card while the Augmentation is on the battlezone. If the Augmented permanent leaves the battlezone, the Augmentation is destroyed.</p>
+              <p><b>Card parts: </b>Name, cost, artwork, type (including super and sub-types), rarity, and text box.</p>
+            </div>
+          </div>
+
+          <!-- Card Type: Machine -->
+          <div class="row p-3 my-4 row p-3 my-4 section-sub">
+            <div class="col-md-4">
+              <img class="img-fluid nexus-card-radius shadow" src="images/card-types/card-machine.png" alt="Nexus: Voidwarpers machine card">
+            </div>
+            <div class="col-md-8">
+              <h3>Machine</h3>
+              <p>A machine, like an enhancement, is also a permanent. Most machines are colorless, so you can play them using any colored energy. Some machines have an additional card sub-type, like Weapons and Crafts.</p>
+              <p>Weapons can be attached to an entity by paying its wield cost. Unlike an augmentation, if the entity a weapon is attached to leaves the battlezone, the weapon is not destroyed and stays on the battlezone.</p>
+              <p>Crafts have Attack and Defend, but cannot attack or defend unless they are piloted by one or more entities. To pilot a craft, pay the pilot cost by tapping a number of entities you control that have a total Attack equal to or greater than the pilot cost number.</p>
+              <p><b>Card parts: </b>Name, cost, artwork, type (including super and sub-types), rarity, and text box.</p>
+            </div>
+          </div>
+
+          <!-- Card Type: Entity -->
+          <div class="row p-3 my-4 row p-3 my-4 section-sub">
+            <div class="col-md-4">
+              <img class="img-fluid nexus-card-radius shadow" src="images/card-types/card-entity.png" alt="Nexus: Voidwarpers entity card">
+            </div>
+            <div class="col-md-8">
+              <h3>Entity</h3>
+              <p>Entities fight your battles. They are permanents, but unlike most other permanents they can attack and defend. Some entities are also Machines, in which case their supertypes are "Machine Entity".</p>
+              <p>Each entity has attack and defense at the bottom right of the card. Its attack (the first number) is how much damage it deals in combat. Its toughness (the second number) is how much damage must be dealt to it in a single turn to destroy it. Entities attack or defend during the combat phase.</p>
+              <p>Unlike other permanents, entities enter the battlezone with “spawned in”, which means it can’t attack, or use an ability that requires it to tap as part of its activation cost until it has started your turn on the battlezone under your control.</p>
+              <p>You can still defend with an entity or activate its abilities no matter how long it’s been on the battlezone. Machine entities are both machines and entities. They’re usually colorless like most machines, and they can attack and defend like other entities.</p>
+              <p><b>Card parts: </b>Name, cost, artwork, type (including super and sub-types), rarity, text box, and attack and defense.</p>
+            </div>
+          </div>
+
+          <!-- Card Type: Voidwarper -->
+          <div class="row p-3 my-4 row p-3 my-4 section-sub">
+            <div class="col-md-4">
+              <img class="img-fluid nexus-card-radius shadow" src="images/card-types/card-voidwarper.png" alt="Nexus: Voidwarpers voidwarper card">
+            </div>
+            <div class="col-md-8">
+              <h3>Voidwarper</h3>
+              <p>In Nexus, voidwarpers are powerful allies who can fight by your side. Voidwarpers can only be played any time you could play a sequence. They’re permanents, and each voidwarper enters the battlezone with the number of alliance counters indicated on the bottom right of the card. Each voidwarper has alliance abilities that can be activated by adding or removing alliance counters from the voidwarper.</p>
+              <p>For example, the symbol (+1) means “Put one alliance counter on this voidwarper” and the symbol (-3) means “Remove three alliance counters from this voidwarper.” You can activate an alliance ability only any time you could play a sequence and only if none of that voidwarper’s alliance abilities has been activated yet that turn.</p>
+              <p>Voidwarpers can be attacked by their owner's opponent’s entities (entities that do, can still be defended as normal), and your opponent can damage them with scripts and abilities instead of damaging you. Any damage dealt to a voidwarper causes it to lose that many alliance counters. If a voidwarper has no loyalty counters, it’s put into your cache.</p>
+              <p>Voidwarpers always have the Mythical supertype and a subtype that is the voidwarper's first name, following this formatting: Mythical Voidwarper — [First Name]. So a voidwarper card like Vega, Mechanic Manipulator would have the type line: Mythical Voidwarper — Vega.</p>
+              <p><b>Card parts: </b>Name, cost, artwork, type (including super and sub-types), rarity, text box, and alliance counters.</p>
+            </div>
+          </div>
+
+          <!-- Card Type: Source -->
+          <div class="row p-3 my-4 row p-3 my-4 section-sub">
+            <div class="col-md-4">
+              <img class="img-fluid nexus-card-radius shadow" src="images/card-types/card-source.png" alt="Nexus: Voidwarpers source card">
+            </div>
+            <div class="col-md-8">
+              <h3>Source</h3>
+              <p>Sources are permanents, but they aren’t cast like scripts. To play a source, just put it onto the battlezone any time you could cast a sequence. You can only do this once during one of the main phases of each of your own turns. This happens immediately so no player can do anything in response.</p>
+              <p>Most sources have abilities that produce energy. This is why sources are used to produce energy which you need to pay the cost for cards or abilities.</p>
+              <p>Each base source has an energy ability that makes one energy of a particular color. Radiant makes Yellow energy (Y), Electric makes Blue energy (B), Dark makes Purple energy (P), Thermal makes Red energy (R), and Chemical makes Green energy (G). Any sources other than Radiant, Electric, Dark, Thermal, and Chemical are consider a non-base source.</p>
+              <p><b>Card parts: </b>Name, artwork, type (including super and sub-types), rarity, and text box.</p>
+            </div>
+          </div>
+
+          <!-- Card Type: Token -->
+          <div class="row p-3 my-4 row p-3 my-4 section-sub">
+            <div class="col-md-4">
+              <img class="img-fluid nexus-card-radius shadow" src="images/card-types/card-token.png" alt="Nexus: Voidwarpers token card">
+            </div>
+            <div class="col-md-8">
+              <h3>Tokens</h3>
+              <p>Tokens are permanents that are created by other card’s effects or abilities. Tokens don’t have a cost. Typically tokens are entities. The creator of the token is the owner of it. The tokens types, abilities (it’s text), stats, and so on are defined by the card or effect that created the token</p>
+              <p>Tokens represent being or things the player or their allied entities can call upon or manifest to help them win.</p>
+              <p><b>Card parts: </b>Depends on the token's card type.</p>
+            </div>
+          </div>
+  
+          <!-- Card Type Definitions -->
+          <h3>Card type definitions</h3>
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+                <th scope="col" class="fw-bold">Card type</th>
+                <th scope="col" class="fw-bold">Is a permanent</th>
+                <th scope="col" class="fw-bold">Is played as a script</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="fw-semibold">Source</td>
+                <td>Yes</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="fw-semibold">Machine</td>
+                <td>Yes</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td class="fw-semibold">Entity</td>
+                <td>Yes</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td class="fw-semibold">Enhancement</td>
+                <td>Yes</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td class="fw-semibold">Voidwarper</td>
+                <td>Yes</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td class="fw-semibold">Interrupt</td>
+                <td></td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td class="fw-semibold">Sequence</td>
+                <td></td>
+                <td>Yes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- SECTION 1: THE BASICS - 6. Game Zones -->
+        <div class="p-4 my-2 bg-white rounded section">
+          <p class="text-muted">SECTION 1.6</p>
+          <div class="row my-4 ">
+            <h2 id="section1.6">Game Zones</h2>
+            <p>Nexus has game zones instead of a game board. These zones are the areas of play where cards and their effects exist. Cards will often change between game zones throughout the game</p>
+            <img class="img-fluid" src="images/.png" alt="...">
+          </div>
+  
+          <!-- Deck -->
+          <div class="row p-3 my-4 row p-3 my-4 section-sub">
+            <h3>Deck</h3>
+            <p>When the game begins, your deck (draw pile) is kept face down, and the cards stay in the order they were in at the beginning of the game. No one can look at the cards in your deck, but you may know how many cards are currently in each player’s deck. Each player has their own deck. In most game modes, a deck must have at least 60 cards at the start of the game, and a deck can not have more than 4 copies of a card.</p>
+          </div>
+  
+          <!-- Hand -->
+          <div class="row p-3 my-4 row p-3 my-4 section-sub">
+              <h3>Hand</h3>
+              <p>The cards you draw go into your hand. No one except you can look at the cards in your hand. At the beginning of the game, you draw seven cards from your deck. Seven is also your maximum hand size. You can have more than seven cards in your hand, but if you hold more than seven cards you must discard cards until you have seven cards at the end of each of your turns. Each player has their own hand..</p>
+          </div>
+  
+          <!-- The Stack -->
+          <div class="row p-3 my-4 row p-3 my-4 section-sub">
+            <h3>The Stack</h3>
+            <p>Scripts and abilities exist on the stack. They wait there to resolve until both players choose not to play any scripts or activate any new abilities. Then the last script or ability that entered the stack resolves, and players get a chance to play and activate abilities again. The stack is a game zone shared by both players.</p>
+          </div>
+  
+          <!-- Battlezone -->
+          <div class="row p-3 my-4 row p-3 my-4 section-sub">
+            <h3>Battlezone</h3>
+            <p>At the beginning of the game, no player has anything in the battlezone, but this is where the battle with your opponent will take place. On each of your turns, you can play a source from your hand (this does not go on the stack and does not need to resolve). Entities, machines, enhancements, and voidwarpers enter the battlezone after they resolve from the stack. Your cards in the battlezone may be arranged in any way you like but must be visible at all times to your opponent, and it must be obvious whether or not a card is tapped. The battlezone is a game zone shared by both players.</p>
+          </div>
+  
+          <!-- Cache -->
+          <div class="row p-3 my-4 row p-3 my-4 section-sub">
+            <h3>Cache</h3>
+            <p>Your cache is your discard pile. Your interrupts and sequences go to your cache as soon as they resolve. All cards go to their owner’s cache if an effect causes them to be discarded, destroyed, sacrificed, or countered. Voidwarpers are put in the cache if they lose all their alliance counters. Entities are put in the cache if the damage they’re dealt in a single turn is equal to or greater than their defense, or if their defense is reduced to 0 or less. Cards in the cache, unlike cards in the deck, are always face up and anyone may look at them at any time. Each player has their own cache</p>
+          </div>
+  
+          <!-- Archive -->
+          <div class="row p-3 my-4 row p-3 my-4 section-sub">
+            <h3>Archive</h3>
+            <p>If a script or ability expels a card, that card is put into the archive, which is a game zone set apart from the rest of the game. The card will remain there until the end of the game unless a script or ability brings it back to another game zone. Expelled cards are typically face up, meaning they’re visible to all players. The archive is a game zone shared by both players.</p>
+          </div>
+  
+          <!-- Sideboard -->
+          <div class="row p-3 my-4 row p-3 my-4 section-sub">
+            <h3>Sideboard</h3>
+            <p>The sideboard is a pseudo-game zone that is typically only accessible between individual matches in competitive games which are comprised of a series of best-of-three matches. The sideboard holds up to fifteen cards in addition to a player's deck, which allows the player to swap out cards in their deck for a card in their sideboard. This is done between matches, during what’s called sideboarding. Before playing a new player, your deck and sideboard must be restored to their original configurations.</p>
+          </div>
+        </div>
+
+        <!-- SECTION 2: THE BUILDING BLOCKS -->
+        <div class="p-4 my-2 bg-white rounded section">
+          <p class="text-muted">SECTION 2</p>
+          <div class="row my-4 ">
+            <h2 id="section2">Section 2: The Building Blocks</h2>
+            <p>This section describes the different actions players take during a game, as well as the game’s “override rule”.</p>
+          </div>
+    
+          <!-- SECTION 2: THE BUILDING BLOCKS - 1. Making Energy -->
+          <div class="row p-3 my-4 section-sub">
+            <p class="text-muted">SECTION 2.1</p>
+            <h3 id="section2.1">Making Energy</h3>
+            <p>To make progress in Nexus, you must make energy. It is used to pay for the costs of cards. Energy comes in different colors, either one of the colors of cards in the game or colorless. When a specific color is needed to pay a cost, you’ll see a symbol indicating which color. (Y) for yellow, (B) for blue, (P) for purple, (R) for red, (G) for green, and (C) for colorless. When any kind of energy can be used, you’ll see a number like (2)</p>
+            <p>Energy is produced by sources. Base sources have a large energy symbol on them. You can tap a base source to produce one energy of that color and add it to your energy pool (it is where your energy is available and stored until it's spent or until the turn ends).</p>
+            <p>Other sources and some entities, machines, and scripts can also produce energy. If they can, it will say something like “Add (Y) to your energy pool.”</p>
+          </div>
+    
+          <!-- SECTION 2: THE BUILDING BLOCKS - 2. Warping -->
+          <div class="row p-3 my-4 section-sub">
+            <p class="text-muted">SECTION 2.2</p>
+            <h3 id="section2.2">Warping</h3>
+            <p>A unique feature of Nexus: Voidwarpers is variable base energy. Once during each match, each player may turn only one base energy card in their hand into any other base energy type. This is called Warping, and it helps players avoid situations where they play a deck with multiple colors but don’t draw sufficient amounts of a specific base source.</p>
+            <p>For example, a player holds a card that costs (1)(Y)(B) but only has one radiant source, and two chemical sources. They then draw another radiant source, not the electric source they need to play the card. They can then use</p>
+          </div>
+    
+          <!-- SECTION 2: THE BUILDING BLOCKS - 3. Tapping -->
+          <div class="row p-3 my-4 section-sub">
+            <p class="text-muted">SECTION 2.3</p>
+            <h3 id="section2.3">Tapping</h3>
+            <p>You tap a permanent when you use a source to produce energy, when you attack with an entity, or when you activate an ability that has (T) as part of its cost (which means “tap this permanent”). Tapped cards are turned sideways.</p>
+            <p>When a permanent is tapped, it typically means it's been used for that turn, and you can’t tap it again until it's untapped (returned to its original straightened-out position).</p>
+            <p>At the beginning of each player’s turn, they untap their tapped cards, making them available to use again.</p>
+          </div>
+        </div>
+
+        <!-- SECTION 2: THE BUILDING BLOCKS - 4. Scripts -->
+        <div class="p-4 my-2 bg-white rounded section">
+          <p class="text-muted">SECTION 2.4</p>
+          <div class="row my-4 ">
+            <h2 id="section2.4">Scripts</h2>
+            <p>All cards except sources are played as scripts. Sequences, entities, machines, enhancements, and voidwarpers can only be played during a player’s main phase if there are no unresolved scripts on the stack. Interrupts can be played at any time. Most activated abilities or permanents can be activated at any time you could play an interrupt.</p>
+          </div>
+  
+          <!-- Playing a Script -->
+          <div class="row p-3 my-4 section-sub">
+            <h3>Playing a Script</h3>
+            <p>When you play a script, it goes on the stack. If the script is a sequence or interrupt which says “Choose one —” you choose which option you’re using. If the script is a sequence or interrupt that has a target, you choose what the target of that script is. Augmentations scripts also target the permanent they augment. If the script has (X) in its cost, you choose what number of energy X stands for, then pay the total cost of the script (including X).</p>
+          </div>
+  
+          <!-- Target -->
+          <div class="row p-3 my-4 section-sub">
+            <h3>Target</h3>
+            <p>When you see the word “target” on a script or ability, you have to choose one or more targets for the script or ability to affect. That can be a permanent, players, cards in a cache or archive. The kinds of targets will be indicated by the card. You choose the targets for a script when you play it, and you choose targets for an activated ability when you activate it. If you can’t meet the targeting requirements, you can’t play the script or activate the activated ability.</p>
+            <p>When the script or ability resolves, it checks the targets to make sure they are legal. If a target isn’t legal, the script or ability can’t affect it. If none of the targets are legal, the script or ability is countered and has no effect.</p>
+          </div>
+  
+          <!-- Responding to a Script -->
+          <div class="row p-3 my-4 section-sub">
+            <h3>Responding to a Script</h3>
+            <p>The script doesn’t resolve (have its effect) right away – it goes on the stack first. Each player is then able to play an interrupt or activate an activated ability in response. If any player (including you) does, that interrupt or ability goes on the stack as well but is now first in order waiting to be resolved. When all players decline to do anything in response, the last script or ability added to the stack is resolved.</p>
+          </div>
+  
+          <!-- Resolving a Script -->
+          <div class="row p-3 my-4 section-sub">
+            <h3>Resolving a Script</h3>
+            <p>When a script resolves, if it's an interrupt or sequence, it has its effect (follow and execute the instructions on the card), then put the card into your cache. If the script is permanent, it goes in the battlezone.</p>
+            <p>After the script resolves, players can decide to play scripts or activate activated abilities again. If no one does, the next thing on the stack resolves. If the stack is empty, the current phase of the turn ends, and the game proceeds to the next phase. If a player plays a script or activates an activated ability again, it goes on the top of the stack and the process repeats.</p>
+          </div>
+  
+          <!-- Example of Scripts on the Stack -->
+          <div class="row p-3 my-4 section-sub">
+            <h2>Example of Scripts on the Stack</h2>
+            <ol class="custom-ol">
+              <li>Your opponent plays Zap targeting your Captain Meira, Mech Commander, a 2/1 entity. Zap goes on the stack.</li>
+              <li>You respond to Zap by playing {cardname} on Captain Meira. {cardname} goes on the stack, before Zap.</li>
+              <li>You and your opponent decline to do anything else. {cardname} resolves first, making Captain Meira a 5/4 until the end of the turn.</li>
+              <li>Then Zap resolves, dealing 2 damage to Captain Meira, which is no longer enough to kill it.</li>
+            </ol>
+          </div>
+    
+          <div class="row p-3 my-4 section-sub">
+            <p><b>What would happen if {cardname} was cast first?</b></p>
+            <p>Zap goes on the stack before {cardname} so it resolves first. It deals 2 damage to Captain Meira, which is enough to kill it since it is still a 2/1. When {cardname} tries to resolve its target is no longer valid since Captain Meira is no longer in the battlezone, so {cardname} is countered and has no effect, then goes to the cache.</p>
+          </div>
+        </div>
+
+        <!-- SECTION 2: THE BUILDING BLOCKS - 5. Abilities -->
+        <div class="p-4 my-2 bg-white rounded section">
+          <p class="text-muted">SECTION 2.4</p>
+          <div class="row my-4 ">
+            <h2 id="section2.5">Abilities</h2>
+          </div>
+    
+          <div class="row p-3 my-4 section-sub">
+            <h3>Static Abilities</h3>
+            <p>Static abilities are any text that remains true while the permanent is in the battlezone. For example, {cardname} is an Enhancement with the ability “Lorem ipsum dolor sit amet.” It’s never activated and just has its stated effect while it remains in the battlezone.</p>
+          </div>
+    
+          <div class="row p-3 my-4 section-sub">
+            <h3>Triggered Abilities</h3>
+            <p>Triggered abilities are the text that is executed immediately when an event causes specific criteria to be met. For example, {cardname} is an entity with the ability “When {cardname} dies, draw a card.”</p>
+            <p>Each triggered ability starts with “when”, “whenever”, or “at”. Triggered abilities, like static abilities, cannot be activated. The ability goes on the stack and resolves, like a script. The ability still resolves, even if the source of the ability leaves the battlezone while the ability is on the stack. If a triggered ability requires a target, but no legal target exists, the ability doesn’t happen.</p>
+          </div>
+    
+          <div class="row p-3 my-4 section-sub">
+            <h3>Activated Abilities</h3>
+            <p>Activated abilities can be activated at any time, barring it has no stated restriction, as long as you can pay its activation cost. Activation costs are not limited to energy only. For example, {cardname} is an entity with the ability “Sacrifice another entity: Put a +1/+1 counter on {cardname}.”</p>
+            <p>Each activated ability has a cost, then a colon (”:”), followed by its effect. Some activated abilities have the {T} symbol in their costs, meaning you must tap the permanent to activate the ability. Therefore, if the permanent is already tapped, you can’t activate the ability.</p>
+            <p>When you activate an activated ability it goes on the stack and resolves like a script. Like with triggered abilities, if the source of the activated ability leaves the battlezone when the ability is on the stack, it still resolves.</p>
+          </div>
+    
+          <div class="row p-3 my-4 section-sub">
+            <h3>Keywords</h3>
+            <p>Keywords are common abilities that have a single word as a shorthand. Keywords have explainer text which describes their ability’s effect. Most keywords are static abilities, but can also be triggered or activated abilities. Core keywords are keywords that are most common, appearing in almost every set. They include; deploy, encrypt, firewall, flash, flight, immune, indestructible, intercept, leech, overpower, quickstrike, rapid, steadfast, threat, and virus. All keywords are listed and explained in the glossary below.</p>
+          </div>
+        </div>
+
+        <!-- SECTION 2: THE BUILDING BLOCKS - 6. Powers -->
+        <div class="p-4 my-2 bg-white rounded section">
+          <p class="text-muted">SECTION 2.6</p>
+          <div class="row my-4 ">
+            <h2 id="section2.6">Powers</h2>
+            <p>Powers are special activated abilities players can use once per turn. Each power is unique and cost 2 energy to activate. Powers are paired with decks, and only one power can be paired with one deck at a time. Powers have no other restrictions. Any power can be used with any deck.</p>
+            <p>Each player's power is displayed next to their portrait. When a player's power is available to use its icon is face up and face down when it's not.</p>
+          </div>
+  
+          <!-- Powers Table -->
+          <table class="table table-bordered table-hover rounded">
+            <!-- Power Table Headers -->
+            <thead class="thead-dark">
+              <tr>
+                <th class="font-weight-bold">Power</th>
+                <th class="font-weight-bold">Icon</th>
+                <th class="font-weight-bold">Description</th>
+              </tr>
+            </thead>
+  
+            <!-- Power: Erase -->
+            <tr>
+              <td class="font-weight-bold">Erase</td>
+              <td><img class="img-fluid" src="images/icons/powers/power-erase.png" alt="..."></td>
+              <td class="td-text">Target player nulls two cards. <i>(Put the top two card of their deck into your cache.)</i></td>
+            </tr>
+  
+            <!-- Power: Inspect -->
+            <tr>
+              <td class="font-weight-bold">Inspect</td>
+              <td><img class="img-fluid" src="images/icons/powers/power-inspect.png" alt="..."></td>
+              <td class="td-text">Scan 1 <i>(Look at the top 1 cards of your deck, then put any number of them on the bottom of your deck and the rest on top in any order.)</i></td>
+            </tr>
+  
+            <!-- Power: Boost -->
+            <tr>
+              <td class="font-weight-bold">Boost</td>
+              <td><img class="img-fluid" src="images/icons/powers/power-boost.png" alt="..."></td>
+              <td class="td-text">Put a +1/+1 counter on target entity you control.</td>
+            </tr>
+  
+            <!-- Power: Fry -->
+            <tr>
+              <td class="font-weight-bold">Fry</td>
+              <td><img class="img-fluid" src="images/icons/powers/power-fry.png" alt="..."></td>
+              <td class="td-text">Deal 1 damage to target opponent or voidwarper.</td>
+            </tr>
+  
+            <!-- Power: Regen -->
+            <tr>
+              <td class="font-weight-bold">Regen</td>
+              <td><img class="img-fluid" src="images/icons/powers/power-regen.png" alt="..."></td>
+              <td class="td-text">You gain 2 health.</td>
+            </tr>
+  
+            <!-- Power: Instantiate -->
+            <tr>
+              <td class="font-weight-bold">Instantiate</td>
+              <td><img class="img-fluid" src="images/icons/powers/power-instantiate.png" alt="..."></td>
+              <td class="td-text">Spawn a 1/1 colorless Drone entity token with "This entity can't defend".</td>
+            </tr>
+  
+            <!-- Power: Freeze -->
+            <!-- New name? -->
+            <tr>
+              <td class="font-weight-bold">Freeze</td>
+              <td><img class="img-fluid" src="images/icons/powers/power-freeze.png" alt="..."></td>
+              <td class="td-text">Target entity an opponent controls with energy value 2 or less can't defend this turn.</td>
+            </tr>
+  
+            <!-- Power: Lock -->
+            <tr>
+              <td class="font-weight-bold">Lock</td>
+              <td><img class="img-fluid" src="images/icons/powers/power-lock.png" alt="..."></td>
+              <td class="td-text">Target entity does not untap during its controller's next untap step.</td>
+            </tr>
+    
+            <!-- Turn into "Animate: Target nonbase source you control becomes a 3/3 Elemental entity until your next turn." ???? -->
+            <tr>
+              <td class="font-weight-bold">Steer</td>
+              <td><img class="img-fluid" src="images/icons/powers/power-steer.png" alt="..."></td>
+              <td class="td-text">Pilot target craft you control with pilot 2 or less.</td>
+            </tr>
+    
+            <tr>
+              <td class="font-weight-bold">Convert</td>
+              <td><img class="img-fluid" src="images/icons/powers/power-convert.png" alt="..."></td>
+              <td class="td-text">Add one energy of any color to your energy pool.</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- SECTION 2: THE BUILDING BLOCKS - 7. Winning the Game -->
+        <div class="p-4 my-2 bg-white rounded section">
+          <p class="text-muted">SECTION 2.7</p>
+          <div class="row my-4 ">
+            <h2 id="section2.7">Winning the Game</h2>
+            <p>The most common way to win in Nexus is by beating down your opponent with your army of Entities. But there are more ways than that, resulting in different play styles. For example, players can also lose the game, granting their opponent a win.</p>
+          </div>
+    
+          <!-- Winning the Game: Win or Lose Effects -->
+          <div class="row p-3 my-4 section-sub">
+            <h3>Win or Lose Effects</h3>
+            <p>Some cards will literally say that a player will win the game or lose the game. These effects are rare, and will either; come at a high price (either in its cost, or the punishment if it fails), or only be enabled once very specific criteria are met.</p>
+            <p>For example, {cardname} is a sequence with the text “Take an extra turn after this one. At the beginning of that turn’s end step, you lose the game.” It’s a powerful effect, that comes with a serious downside.</p>
+            <p>{cardname} is an enhancement with the text “At the beginning of your upkeep, if X, Y, and Z, you win the game”. Also a powerful effect, contingent on many conditions being met.</p>
+            <p>Lastly, if a player has 10 or more Infection counters at any given point they lose the game immediately.</p>
+          </div>
+    
+          <!-- Winning the Game: Being Unable to Draw -->
+          <div class="row p-3 my-4 section-sub">
+            <h3>Being Unable to Draw</h3>
+            <p>Anytime a player is unable to draw a card from their deck, they automatically and immediately lose the game.</p>
+            <p>Some card effects revolve around a tactic called milling, which aims to deplete their opponent’s deck of cards to trigger a loss.</p>
+          </div>
+    
+          <!-- Winning the Game: Opponent Conceding -->
+          <div class="row p-3 my-4 section-sub">
+            <h3>Opponent Conceding</h3>
+            <p>A player can concede the current match at any point. If a player does, they lose that match. If they are playing a best-of-one game they lose the game.</p>
+            <p>If they are playing a best-of-three game, they lose that match. In which case they either lose the whole game if they already lost one match in the series, or go to sideboarding if they haven’t.</p>
+          </div>
+    
+          <!-- Winning the Game: Running Out of Time -->
+          <div class="row p-3 my-4 section-sub">
+            <h3>Running Out of Time</h3>
+            <p>Each player has their individual timer, set to 25 minutes. This is the total amount of time they have to make decisions on all of their turns in any given game. If it’s a best-of-one game they have 25 minutes for the entire match. If it’s a best-of-three game they have 25 minutes total for all three matches in the game’s series.</p>
+            <p>If a player’s time runs out, they automatically and immediately lose the game.</p>
+          </div>
+    
+          <!-- Winning the Game: Reaching Zero or Less Health -->
+          <div class="row p-3 my-4 section-sub">
+            <h3>Reaching Zero or Less Health</h3>
+            <p>Most often a game ends when a player reaches zero health. This can happen in a few ways. Most commonly, it’s because they took lethal damage (damage that brought them to zero or less health once the damage is resolved), from their opponent’s entities attacking them and dealing combat damage to them.</p>
+            <p>But more cards and effects other than entities can deal damage too. This could also deal lethal damage to a player.</p>
+            <p>Players can also lose life, which is similar to taking damage, with the difference that it can’t be prevented.</p>
+            <p>If a player at any point is at zero or less health once the stack is clear, they automatically and immediately lose the game.</p>
+          </div>
+
+          <!-- SECTION 2: THE BUILDING BLOCKS - 8. Attacking and Defending -->
+          <div class="row p-3 my-4 section-sub">
+            <p class="text-muted">SECTION 2.8</p>
+            <h2 id="section2.8">Attacking and Defending</h2>
+            <p>As stated the primary way to win is to attack with entities. When an entity attacks a player and is not defended, it deals damage equal to its attack to that player.</p>
+            <p>The combat phase happens in the middle of players’ turns. The combat phase starts with the player whose turn it is first selecting which of their entities will attack, and then selecting who or what those entities attack. Each entity’s attack target is selected independently, meaning they don’t all have to attack the same target in a given turn. They can attack opposing players or one of their voidwalkers. They cannot however attack enemy entities. Each entity that is selected to attack becomes tapped after attackers are selected. Then all attacking entities attack at the same time. You can only attack with entities that are untapped before selecting attackers, and only if it was already in the battlezone when your turn began.</p>
+            <p>Then the player being attacked selects which of their entities will defend. Only untapped entities can be selected as a defender. All entities can defend no matter how long they have been in the battlezone. Each entity can defend only one attacker, but each attacker can be defended by multiple entities at the same time. When that happens, the attacking player chooses the order in which defending entity will receive damage from the attacking entity first. Entities do not have to defend attacking entities.</p>
+            <p>After all defending entities are selected, combat damage is assigned, then dealt. Each entity – both attackers and defenders – deal damage equal to their attack. When combat damage is assigned:</p>
+            <ul class="custom-ul">
+              <li>Attacking entities that were not defended assigns damage to the player or voidwarper it’s attacking.</li>
+              <li>Attacking entities that were defended deals damage to the defending entity. If the attacking entity is defended by multiple entities, the attacking player decides on how to distribute the attacking entity’s damage. The first defending entity in line must be assigned at least enough damage to destroy it before any other damage can be assigned to the next defending entity, and so on until all damage the attacking entity could deal has been assigned.</li>
+              <li>Blocking entities assigns damage to the attacker it’s defending.</li>
+            </ul>
+            <p>When combat damage is dealt:</p>
+            <ul class="custom-ul">
+              <li>Damage assigned to the defending player makes them lose that much life.</li>
+              <li>Damage assigned to the defending player’s voidwarpers makes them lose that many allegiance counters.</li>
+              <li>
+                Damage assigned to both players’ entities is dealt.
+                <ul>
+                  <li>If the damage received is equal to or greater than the entity’s defense in a single turn, that entity is destroyed.</li>
+                  <li>If the damage received is not equal to or greater than the entity’s defense in a single turn, that entity is not destroyed. However, the damage remains until the end of the turn, before wearing off.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <!-- SECTION 2: THE BUILDING BLOCKS - 9. Example of Combat -->
+          <div class="row p-3 my-4 section-sub">
+            <p class="text-muted">SECTION 2.9</p>
+            <h2 id="section2.9">Example of Combat</h2>
+      
+            <div class="row p-3 my-4 section-sub">
+              <h3>Select Attackers</h3>
+              <p>The attacking player attacks their three biggest entities and taps them. They don’t attack with the smallest because they would be too easy for a defender to destroy. And it might come in handy as a defender if the opponent attacks on their turn. A 1/1 can still defend and absorb all the damage from a much bigger entity that would otherwise damage the player.</p>
+            </div>
+      
+            <div class="row p-3 my-4 section-sub">
+              <h3>Select Defenders</h3>
+              <p>The defending player assigns defends to two of the three attackers and lets the third attacker through. All defending choices are up to the defending player.</p>
+            </div>
+      
+            <div class="row p-3 my-4 section-sub">
+              <h3>Combat Damage</h3>
+              <p>The attacker that is not defended deals its damage to the defending player. The attackers that are defended and the defenders deal damage to each other. The smaller entities die and the bigger entities live.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 2: THE BUILDING BLOCKS - 10. The Override Rule -->
+        <div class="p-4 my-2 bg-white rounded section">
+          <p class="text-muted">SECTION 2.10</p>
+          <div class="row my-4 ">
+            <h2 id="section2.10">The Override Rule</h2>
+            <p>If a Nexus card contradicts the rules of the game, the card is correct. This makes the rules of Nexus a flexible framework that supports a vast amount of unique interactions and a range of strategies. For example, the rules say that you can attack with any number of entities during a turn. But {cardname} is an entity that says “No more than one entity can attack each combat.” While {cardname} is in the battlezone, its static ability changes the rule of the game.</p>
+          </div>
+        </div>
+
+        <!-- SECTION 3: PLAYING THE GAME - 1. Start the Game -->
+        <div class="p-4 my-2 bg-white rounded section">
+          <p class="text-muted">SECTION 3.1</p>
+          <div class="row my-4 ">
+            <h2 id="section3.1">Section 3: Playing a Game</h2>
+            <p>This section walks through how to play Nexus, by describing what happens in each phase of a turn.</p>
+          </div>
+          
+          <div class="row p-3 my-4 section-sub">
+            <h3>Start the Game</h3>
+            <p>Each player starts the game with 20 health, and at least 60 cards in their deck. Which player goes first is decided at random, unless this is the second or third match in a best-of-three game. In which case the losing player of the previous match in the series decides who goes first.</p>
+            <p>Each player shuffles their deck, then draws a starting hand of exactly seven cards. Both players then decide if they want to keep the hand they drew. If they don’t, they can mulligan. The player who starts the match decides first, and then the other player decides if they also want to mulligan.</p>
+            <p>To mulligan, shuffle your starting hand into your deck, then draw seven new cards and put one of them at the bottom of your deck (you don’t have to reveal the card to your opponent). Then the process repeats, until no player mulligans. Each time a player mulligans, they must put an additional card of their new hand on the bottom of their deck. So, for the first mulligan, they return one card. Then two cards for their second mulligan, three cards for their third, and so on.</p>
+            <p>When both players decide to keep their starting hand, the game starts, and the starting player goes first.</p>
+          </div>
+    
+          <div class="row p-3 my-4 section-sub">
+            <h3 id="section3.2">Parts of the Turn</h3>
+            <p>Each turn of the game is split into phases, that in turn are split into steps. Each turn moves between these phases and steps in the same order. Whenever a new phase or step is entered, any triggered abilities that happen during that phase or step go on the stack. The active player, meaning the player whose turn it is, has priority over the other player. That means they get to play scripts or activate abilities before their opponent. When both players subsequently decide not to act and nothing on the stack is waiting to be resolved, the game proceeds to the next step or phase.</p>
+            <p>Below is a description of each of the phases and steps in the order they happen during a turn. They are described from the active player’s perspective.</p>
+            
+            <ol class="custom-ol">
+              <li>
+                Starting Phase
+                <ol class="custom-ol">
+                  <li class="ol.alpha-list">
+                    <p><b>Untap Step</b></p>
+                    <p>You untap all your tapped permanents. Skip this step if it's your first turn of the game. Players can’t take any action during this step.</p>
+                  </li>
+                  <li class="ol.alpha-list">
+                    <p><b>Maintainance Step</b></p>
+                    <p>Some triggered abilities may happen at this step. They will say “at the beginning of your maintenance”. Players can play interrupts and activate activated abilities.</p>
+                  </li>
+                  <li class="ol.alpha-list">
+                    <p><b>Draw Step</b></p>
+                    <p>Draw a card from your deck. Skip this step if you are the player going first in the match (this helps balance out the advantage of going first). Players can play interrupts and activate activated abilities.</p>
+                  </li>
+                </ol>
+              </li>
+              <li>
+                Primary Phase
+                <p>You may play any number of sequences, interrupts, entities, machines, enhancements, and voidwarpers. You can also activate any number of activated abilities as well. You may also play a source, but only one per turn. Your opponents can play interrupts or activate activated abilities as well.</p>
+              </li>
+              <li>
+                Combat Phase
+                <ol class="custom-ol">
+                  <li class="ol.alpha-list">
+                    <p><b>Start of Combat Step</b></p>
+                    <p>Some triggered abilities may happen at this step. Players can play interrupts and activate activated abilities. </p>
+                  </li>
+                  <li class="ol.alpha-list">
+                    <p><b>Select Attackers Step</b></p>
+                    <p>You select which, if any, of your untapped entities will attack and which player or voidwarper they will attack. Then they attack the chosen targets and are tapped. Players can play interrupts and activate activated abilities.</p>
+                  </li>
+                  <li class="ol.alpha-list">
+                    <p><b>Select Defenders Step</b></p>
+                    <p>Your opponent decides which, if any, of their untapped entities will defend your attacking entities. Then they defend. If multiple entities defend a single attacker, you order the defenders to decide which is first in line for receiving combat damage. Then second in line, third, and so on. Players can play interrupts and activate activated abilities.</p>
+                  </li>
+                  <li class="ol.alpha-list">
+                    <p><b>Combat Damage Step</b></p>
+                    <p>Each attacking and defending entity that’s still in the battlezone assigns its combat damage to:</p>
+                    <ol class="custom-ol">
+                      <li class="ol.lower-roman">the defending player <i>(if attacking that player and it wasn’t defended).</i></li>
+                      <li class="ol.lower-roman">a voidwarper <i>(if attacking that and it wasn’t defended).</i></li>
+                      <li class="ol.lower-roman">the entity or entities defending it.</li>
+                    </ol>
+                    <p>If an attacking entity is defended by multiple defending entities, the attacking player decides how to assign the damage (view the attacking and defending section above). Then entities deal their combat damage. All entities combat damage is dealt at the same time. After combat damage is dealt, players can play interrupts and activate activated abilities (but not before).</p>
+                  </li>
+                  <li class="ol.alpha-list">
+                    <p><b>End of Combat Step</b></p>
+                    <p>Some triggered abilities may happen at this step. Players can play interrupts and activate activated abilities.</p>
+                  </li>
+                </ol>
+              </li>
+              <li>
+                <p><b>Primary Phase</b></p>
+                <p>Your second primary phase is just like your first. If you didn’t already play a source, you can still do that during this phase. Players can play interrupts and activate activated abilities. </p>
+              </li>
+              <li>
+                <p><b>End Phase</b></p>
+                <ol class="custom-ol">
+                  <li class="ol.alpha-list">
+                    <p><b>End Step</b></p>
+                    <p>Some triggered abilities may happen at this step. Players can play interrupts and activate activated abilities.</p>
+                  </li>
+                  <li class="ol.alpha-list">
+                    <p><b>Clear Step</b></p>
+                    <p>If you have more than seven cards in your hand, choose cards to discard until you have exactly seven cards in your hand. All damage, combat or otherwise, is removed. All “until end of turn” and “this turn” effects end. Players can play interrupts and activate activated abilities only in response to a triggered ability.</p>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+          </div>
+          
+          <!-- Turn Order Action Table -->
+            <table class="table table-bordered table-hover rounded">
+              <thead class="thead-dark">
+                <tr>
+                  <th class="font-weight-bold">Parts of Turn</th>
+                  <th class="font-weight-bold">Skipped if it's the players first turn?</th>
+                  <th class="font-weight-bold">Players can take action?</th>
+                </tr>
+              </thead>
+    
+              <tr>
+                <td class="font-weight-bold">1. Start Phase</td>
+                <td>No</td>
+                <td>Yes</td>
+              </tr>
+    
+              <tr>
+                <td class="font-weight-bold">1. A. Untap Step</td>
+                <td>Yes</td>
+                <td>No</td>
+              </tr>
+    
+              <tr>
+                <td class="font-weight-bold">1. B. Maintenance Step</td>
+                <td>No</td>
+                <td>Yes</td>
+              </tr>
+    
+              <tr>
+                <td class="font-weight-bold">1. C. Draw Step</td>
+                <td>No <i>(unless it's the starting player's first turn)</i></td>
+                <td>Yes</td>
+              </tr>
+    
+              <tr>
+                <td class="font-weight-bold">2. Primary Face (first)</td>
+                <td>No</td>
+                <td>Yes</td>
+              </tr>
+    
+              <tr>
+                <td class="font-weight-bold">3. Combat Phase</td>
+                <td>No</td>
+                <td>Yes</td>
+              </tr>
+    
+              <tr>
+                <td class="font-weight-bold">3. A. Start of Combat</td>
+                <td>No</td>
+                <td>Yes</td>
+              </tr>
+    
+              <tr>
+                <td class="font-weight-bold">3. B. Select Attackers</td>
+                <td>No</td>
+                <td>Yes</td>
+              </tr>
+    
+              <tr>
+                <td class="font-weight-bold">3. C. Select Defenders</td>
+                <td>No</td>
+                <td>Yes</td>
+              </tr>
+    
+              <tr>
+                <td class="font-weight-bold">3. D. Combat Damage</td>
+                <td>No</td>
+                <td>Yes</td>
+              </tr>
+    
+              <tr>
+                <td class="font-weight-bold">3. E. End of Combat</td>
+                <td>No</td>
+                <td>Yes <i>(after combat damage is dealt)</i></td>
+              </tr>
+    
+              <tr>
+                <td class="font-weight-bold">4. Primary Face (second)</td>
+                <td>No</td>
+                <td>Yes</td>
+              </tr>
+    
+              <tr>
+                <td class="font-weight-bold">5. Ending Phase</td>
+                <td>No</td>
+                <td>Yes</td>
+              </tr>
+    
+              <tr>
+                <td class="font-weight-bold">5. A. Ending Phase</td>
+                <td>No</td>
+                <td>Yes</td>
+              </tr>
+    
+              <tr>
+                <td class="font-weight-bold">5. B. Clear Step</td>
+                <td>No</td>
+                <td>Yes <i>(in response to a triggered ability)</i></td>
+              </tr>
+            </table>
+          
+          <div class="row p-3 my-4 section-sub">
+            <h3 id="section3.3">The Next Turn</h3>
+            <p>Now it’s your opponent’s turn. They go through the phases and steps as described. When they are done with their turn it is your turn again. You take turns playing cards, responding to each other's actions, and attacking and defending. This repeats until a player wins or loses the game as described in the Winning the Game section above.</p>
+          </div>
+        </div>
+
+        <!-- SECTION 4: CREATING AND CUSTOMIZING - 1. Building Your Deck -->
+        <div class="p-4 my-2 bg-white rounded section">
+          <p class="text-muted">SECTION 4.1</p>
+          <div class="row my-4 ">
+            <h2 id="section4.1">Creating and Customizing</h2>
+          </div>
+    
+          <!-- Creating and Customizing: Building Your Deck -->
+          <div class="row p-3 my-4 section-sub">
+            <h3>Building Your Deck</h3>
+            <p>In Nexus each player plays with their own customized deck. Decks are built using any cards players want. When it comes to deckbuilding, most of it is up to you, which offers each player a lot of freedom to create their deck. But there are a few rules regarding decks:</p>
+            <ul class="custom-ul">
+              <li>A deck must have at least 60 cards.</li>
+              <li>A deck cannot have more than 4 copies of any given card <i>(except base sources).</i></li>
+              <li>A deck can only be paired with one power at a time.</li>
+              <li>A deck’s sideboard cannot have more than 15 cards.</li>
+              <li>All cards in a deck and that deck’s sideboard must be legal in the format it’s intended for.</li>
+            </ul>
+            <p>Here’s some general guidelines for building a deck:</p>
+            <ul class="custom-ul">
+              <li><b>Sources</b> — A good rule of thumb is that 40-45% of your deck should be sources. The amount depends on the cost curve of your cards. Decks with lower-cost cards need fewer sources, and decks with higher-cost cards need more sources. Generally, decks have between 24-28 sources.</li>
+              <li><b>Entities</b> — A good rule of thumb is that 25-40% of your deck should be entities. Depending on your decks strategy the cost of entities will vary, but a mix of energy costs gives you more flexibility throughout a match. You’ll have both early- and late-game threats.</li>
+              <li><b>Other cards</b> — Round out your deck with machines, enhancements, voidwarpers, interrupts, and sequences.</li>
+              <li><b>Sideboard</b> — Sideboards let players customize their deck between matches in best-of-three games. Typically a good sideboard contains a variety of cards that are useful against specific types of cards and strategies your opponents may have. Since you don’t know what they’ll be playing before the match starts, its good to prepare for as many likely scenarios as possible.</li>
+            </ul>
+            <p>As you play your deck, you may start to notice some cards that are more or less impactful or combinations of cards that work well. You can always customize your deck between games to improve it or adjust it depending on trends in the competition you’re facing.</p>
+            <p>As players collect more cards they’ll have more options to customize their deck or build new ones. Player’s will build different decks for different formats.</p>
+          </div>
+        </div>
+    
+        <!-- Creating and Customizing: Formats -->
+        <div class="p-4 my-2 bg-white rounded section">
+          <p class="text-muted">SECTION 4.2</p>
+          <div class="row my-4 ">
+            <h2 id="section4.2">Formats</h2>
+            <p>Formats are defined by what cards are legal to play in them. This is often dictated by what card sets are available. Formats change over time, allowing for new strategies to emerge, as sets rotate in and out. Set rotations happen when a new set is released. In Standard, only cards from the most recent sets are allowed. When a new set is released, the oldest set in Standard rotates in, and the new set rotates in, updating the legal sets in Standard.</p>
+            <p>At launch, Standard will be the only game format available. Other formats include the Playground, and Chaos.</p>
+          </div>
+        </div>
+    
+        <!-- Creating and Customizing: Sets -->
+        <div class="p-4 my-2 bg-white rounded section">
+          <p class="text-muted">SECTION 4.3</p>
+          <div class="row my-4 ">
+            <h2 id="section4.3">Sets</h2>
+            <p>Like most TCG’s there will be continuous releases of sets, containing new Nexus card. Sets are themed around a specific set of strategies, and take place on one of the planets in the Nexus universe.</p>
+          </div>
+          
+          <!-- Creating and Customizing: Official Sets -->
+          <div class="row p-3 my-4 section-sub">
+            <h3>Official Sets</h3>
+            <p>Official sets are bigger sets which contain cards designed by the Nexus team, and are released on a quarterly basis. Official sets are tentpole sets for the game’s lore which guides and inspires the community when creating their own cards.</p>
+          </div>
+    
+          <!-- Creating and Customizing: Community Sets -->
+          <div class="row p-3 my-4 section-sub">
+            <h3>Community Sets</h3>
+            <p>Official sets are smaller sets which contain cards designed by the Nexus community, and are released on a monthly basis (expect during months when an Official set is released). Cards for the community sets are curated by the collective Nexus community from cards created by individual community members. The Nexus team selects which cards make it into the next community set, from the shortlist generated by the community.</p>
+          </div>
+        </div>
+
+        <!-- SECTION 4: CREATING AND CUSTOMIZING - 4. Custom Cards -->
+        <div class="p-4 my-2 bg-white rounded section">
+          <p class="text-muted">SECTION 4.4</p>
+          <div class="row my-4 ">
+            <h2 id="section4.4">Custom Cards</h2>
+            <p>The thing that sets Nexus: Voidwarpers apart from other TCG’s is that players not only play cards but create cards as well!</p>
+            <img class="img-fluid" src="images/CardCreation.png" alt="Nexus: Voidwarpers custom card creation">
+          </div>
+    
+          <!-- Creating and Customizing: Creating a Card -->
+          <div class="row p-3 my-4 section-sub">
+            <h3>Creating a Card</h3>
+            <ol class="custom-ol">
+              <li class="ul.square-list">New cards start out blank.</li>
+              <li class="ul.square-list">
+                Start creating by either:
+                <ol>
+                  <li class="ol.alpha-list">Writing a promp.</li>
+                  <li class="ol.alpha-list">Writing directly in the text box or select card types and keywords from a drop-down menu to start creating.</li>
+                </ol>
+              </li>
+              <li class="ul.square-list">
+                Then, the AI either:
+                <ol class="custom-ol">
+                  <li class="ol.alpha-list">Generates a card based on the prompt.</li>
+                  <li class="ol.alpha-list">Contextually auto-completes text, assigns card color, and adds info based on the card type.</li>
+                </ol>
+              </li>
+              <li class="ul.square-list">The AI uses data from the card to generate names, artwork, and flavor text while automatically balancing the card’s power level.</li>
+              <li class="ul.square-list">Select one of the generated illustrations for the cards artwork.</li>
+              <li class="ul.square-list">Tweak, make edits, or re-generate the card entirely.</li>
+              <li class="ul.square-list">A brand new Nexus card is created!</li>
+            </ol>
+          </div>
+
+          <!-- Creating and Customizing: Sharing Your Card-->
+          <div class="row p-3 my-4 section-sub">
+            <h3 id="section4.5">Sharing Your Card</h3>
+            <p>When you’re done making a card, you can share it with the Nexus community on Discord or Reddit or to any social media platform you like.</p>
+          </div>
+
+          <!-- Creating and Customizing: Playing Your Card-->
+          <div class="row p-3 my-4 section-sub">
+            <h3 id="section4.6">Playing Your Cards</h3>
+            <p>You can try out your card creations immediately in the Playground or the Chaos format.</p>
+          </div>
+
+          <!-- Creating and Customizing: Making Money From Your Card-->
+          <div class="row p-3 my-4 section-sub">
+            <h3 id="section4.7">Making Money From Your Card</h3>
+            <p>When the game is launched, any card created by a community member that’s included in an official set will be eligible for revenue share on any sale of boosters containing the card, or any second market transaction involving the card.</p>
+          </div>
+        </div>
+
+        <!-- SECTION 5: GAME LORE - 1. Theme -->
+        <div class="p-4 my-2 bg-white rounded section">
+          <p class="text-muted">SECTION 5.1</p>
+          <div class="row my-4 ">
+            <h2 id="section5.1">Game Lore</h2>
+            <p><b>Background</b></p>
+            <p>Nexus: Voidwarpers takes place in a simulated universe. Players assume the roles of voidwarpers. They are people who connect to the simulated universe, from outside the Nexus, and wield incredible powers inside the simulated universe, including the ability to warp themselves and entities across the Nexus.</p>
+          </div>
+          
+          <!-- Game Lore: The World Inside Nexus-->
+          <div class="row p-3 my-4 section-sub">
+            <h3>The World Inside Nexus</h3>
+            <p>Lorem ipsum dolor sit amet</p>
+          </div>
+        </div>
+    
+        <!-- SECTION 5: GAME LORE - 2. Background -->
+        <div class="p-4 my-2 bg-white rounded section">
+          <p class="text-muted">SECTION 5.2</p>
+          <div class="row my-4 ">
+            <h2 id="section5.2">Background</h2>
+            <p>Section intro goes here</p>
+          </div>
+    
+          <!-- Game Lore: Sub-section Title-->
+          <div class="row p-3 my-4 section-sub">
+            <h3>Sub-section title</h3>
+            <p>Paragraph</p>
+            <p>Paragraph</p>
+            <p>Paragraph</p>
+          </div>
+        </div>
+
+        <!-- SECTION 5: GAME LORE - 3. Characters -->
+        <div class="p-4 my-2 bg-white rounded section">
+          <p class="text-muted">SECTION 5.3</p>
+          <div class="row my-4 ">
+            <h2 id="section5.3">Section title</h2>
+            <p>Section intro goes here</p>
+          </div>
+    
+          <!-- Game Lore: Sub-section Title-->
+          <div class="row p-3 my-4 section-sub">
+            <h3>Sub-section title</h3>
+            <p>Paragraph</p>
+            <p>Paragraph</p>
+            <p>Paragraph</p>
+          </div>
+        </div>
+    
+        <!-- SECTION 5: GAME LORE - 4. Planets -->
+        <div class="p-4 my-2 bg-white rounded section">
+          <p class="text-muted">SECTION 5.4</p>
+          <div class="row my-4 ">
+            <h2 id="section5.4">Planets</h2>
+            <p>Section intro goes here</p>
+          </div>
+    
+          <!-- Canopis -->
+          <div class="row p-3 my-4 section-sub">
+            <img class="img-fluid rounded" src="images/planets/Canopis-2.png" alt="Canopis">
+            <h4 id="planetCanopis" class="custom-h4-spacing">Canopis</h4>
+            <p>Jungle and forest planet.</p>
+          </div>
+          
+          <!-- Deepmere -->
+          <div class="row my-4">
+            <img class="img-fluid rounded" src="images/planets/Deepmere-3.png" alt="Deepmere">
+            <h4 id="planetDeepmere" class="custom-h4-spacing">Deepmere</h4>
+            <p>Underwater planet.</p>
+          </div>
+          
+          <!-- Dunestar -->
+          <div class="row my-4">
+            <img class="img-fluid rounded" src="images/planets/Dunestar-3.png" alt="Dunestar">
+            <h4 id="planetDunestar" class="custom-h4-spacing">Dunestar</h4>
+            <p>Desert planet.</p>
+          </div>
+          
+          <!-- Frosthold -->
+          <div class="row my-4">
+            <img class="img-fluid rounded" src="images/planets/Frosthold.png" alt="Frosthold">
+            <h4 id="planetFrosthold" class="custom-h4-spacing">Frosthold</h4>
+            <p>Snow and ice planet.</p>
+          </div>
+          
+          <!-- Glintara -->
+          <div class="row my-4">
+            <img class="img-fluid rounded" src="images/planets/Glintara-3.png" alt="Glintara">
+            <h4 id="planetGlintara" class="custom-h4-spacing">Glintara</h4>
+            <p>Underground cavern planet.</p>
+          </div>
+          
+          <!-- Lorelyn -->
+          <div class="row my-4">
+            <img class="img-fluid rounded" src="images/planets/Lorelyn-3.png" alt="Lorelyn">
+            <h4 id="planetLorelyn" class="custom-h4-spacing">Lorelyn</h4>
+            <p>Folklore and fairytales planet.</p>
+          </div>
+          
+          <!-- Lumina -->
+          <div class="row my-4">
+            <img class="img-fluid rounded" src="images/planets/Lumina-2.png" alt="Lumina">
+            <h4 id="planetLumina" class="custom-h4-spacing">Lumina</h4>
+            <p>Global metropolis planet and galaxy trading hub.</p>
+          </div>
+          
+          <!-- Moroseth -->
+          <div class="row my-4">
+            <img class="img-fluid rounded" src="images/planets/Moroseth.png" alt="Moroseth">
+            <h4 id="planetMoroseth" class="custom-h4-spacing">Moroseth</h4>
+            <p>Moroseth is a dark, foreboding planet, perpetually shrouded in a thick, impenetrable mist.</p>
+          </div>
+          
+          <!-- Secoria -->
+          <div class="row my-4">
+            <img class="img-fluid rounded" src="images/planets/Secoria-2.png" alt="Secoria">
+            <h4 id="planetSecoria" class="custom-h4-spacing">Secoria</h4>
+            <p>A fiery and fierce planetary arena where gods make entities fight.</p>
+          </div>
+          
+          <!-- Starhaven -->
+          <div class="row my-4">
+            <img class="img-fluid rounded" src="images/planets/Starhaven-2.png" alt="Starhaven">
+            <h4 id="planetStarhaven" class="custom-h4-spacing">Starhaven</h4>
+            <p>Artificial halo-shaped planet-sized space station.</p>
+          </div>
+          
+          <!-- Yomix -->
+          <div class="row my-4">
+            <img class="img-fluid rounded" src="images/planets/Yomix-3.png" alt="Yomix">
+            <h4 id="planetYomix" class="custom-h4-spacing">Yomix</h4>
+            <p>Japan-inspired cyberpunk neo-noir planet.</p>
+          </div>
+        </div>
+
+        <!-- SECTION 5: GAME LORE - 5. Entities -->
+        <div class="p-4 my-2 bg-white rounded section">
+          <p class="text-muted">SECTION 5.5</p>
+          <div class="row my-4 ">
+            <h2 id="section5.5">Entities</h2>
+            <p>Section intro goes here</p>
+          </div>
+          
+          <!-- Sentient Entities -->
+          <div class="row p-3 my-4 section-sub">
+            <h3>Sentient Entities</h3>
+            
+              <!-- Android --> 
+              <div class="row" id="entityAndroid">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/android-2.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Android</h3>
+                  <p>Human-like features, metallic or synthetic skin, visible joints and circuits. Mechanical, logical, task-oriented.</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Dunestar</a>, <a>Lumina</a>, <a>Moroseth</a>, <a>Yomix</a></p>
+                      <p><b>Frequency: </b>Frequent</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Colorless</p>
+                      <p><b>Secondary Color Identities: </b>Yellow, Blue, Purple</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Angel --> 
+              <div class="row" id="entityAngel">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/angel.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Angel</h3>
+                  <p>Tall, luminous beings with large wings, often glowing or radiant.</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Dunestar</a>, <a>Lorelyn</a>, <a>Lumina</a>, <a>Moroseth</a>, <a>Secoria</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Brista --> 
+              <div class="row" id="entityBrista">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/brista-2.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Brista</h3>
+                  <p>Spiky skin, adapted to arid environments, often with ornate body markings.</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Dunestar</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Bird --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Cosmic --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Demon --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Dracan --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Dragon --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Dwarf --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Elf --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Giant --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Gnome --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Goblin --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- God --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Human --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Nymph --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Octopi --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Rodent --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Shapeshifter --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Specter --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Talox --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Treant --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Vampire --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Vervai --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Zombie --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+          <div class="row p-3 my-4 section-sub">
+            <h3>Feral Entities</h3>
+              <!-- Arachnid --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Bear --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Bird --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Bristlyn --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Cat --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Dinosaur --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Dragon --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Drone --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Fish --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Glitch --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Goo --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Horror --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Insect --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Octopi --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Phoenix --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Rodent --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Shapeshifter --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Wyrm --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Zombie --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+    
+          <div class="row p-3 my-4 section-sub">
+            <h3>Entity Roles</h3>
+              <!-- Cyborg --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Engineer --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Explorer --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Healer --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Highborn --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Lycan --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Mercenary --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Merchant --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Mutant --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Pilot --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Rogue --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Shaman --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Soldier --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Sorcerer --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Technomancer --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Telepath --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Warrior --> 
+              <div class="row" id="entityName">
+                <div class="col-md-3 p-3 my-4">
+                  <img class="img-fluid rounded" src="images/entities/.png" alt="Lorem ipsum">
+                </div>
+                <div class="col-md-9 p-3 my-4">
+                  <h3>Entity Name</h3>
+                  <p>Paragraph</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><b>Planets: </b><a>Planet</a>, <a>Planet</a>, <a>Planet</a></p>
+                      <p><b>Frequency: </b>Paragraph</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p><b>Primary Color Identities: </b>Paragraph</p>
+                      <p><b>Secondary Color Identities: </b>Paragraph</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>  
+          </div>
+        </div>
+
+        <!-- SECTION 5: GAME LORE - 6. Characters -->
+        <div class="p-4 my-2 bg-white rounded section">
+        <p class="text-muted">SECTION 5.6</p>
+        <div class="row my-4 ">
+          <h2 id="section5.6">Voidwarpers</h2>
+          <p>Section intro goes here</p>
+        </div>
+
+        <div class="row p-3 my-4 section-sub">
+          <!-- Voidwarper --> 
+          <div class="row" id="voidwarperCyborgLady">
+            <div class="col-md-4 p-3 my-4">
+              <img class="img-fluid rounded" src="images/voidwarpers/cyborg-lady.png" alt="Lorem ipsum">
+            </div>
+            <div class="col-md-8 p-3 my-4">
+              <h3>Cyborg Lady</h3>
+              <p>Paragraph</p>
+              <p><b>Background: </b>Lorem ipsum</p>
+              <p><b>Home planet: </b><a>Planet</a></p>
+              <p><b>Color alignment: </b>Color</p>
+            </div>
+          </div>
+      
+          <!-- Vega --> 
+          <div class="row" id="voidwarperVega">
+            <div class="col-md-4 p-3 my-4">
+              <img class="img-fluid rounded" src="images/voidwarpers/vega.png" alt="Lorem ipsum">
+            </div>
+            <div class="col-md-8 p-3 my-4">
+              <h3>Vega</h3>
+              <p>Paragraph</p>
+              <p><b>Background: </b>Lorem ipsum</p>
+              <p><b>Home planet: </b><a>Yomix</a></p>
+              <p><b>Color alignment: </b>Color</p>
+            </div>
+          </div>
+      
+          <!-- Demon Voidwarper --> 
+          <div class="row" id="voidwarperDemon">
+            <div class="col-md-4 p-3 my-4">
+              <img class="img-fluid rounded" src="images/voidwarpers/demon-voidwarper.png" alt="Lorem ipsum">
+            </div>
+            <div class="col-md-8 p-3 my-4">
+              <h3>Demon Voidwarper</h3>
+              <p>Paragraph</p>
+              <p><b>Background: </b>Lorem ipsum</p>
+              <p><b>Home planet: </b><a>Planet</a></p>
+              <p><b>Color alignment: </b>Color</p>
+            </div>
+          </div>
+      
+          <!-- Aria --> 
+          <div class="row" id="voidwarperAria">
+            <div class="col-md-4 p-3 my-4">
+              <img class="img-fluid rounded" src="images/voidwarpers/aria.png" alt="Lorem ipsum">
+            </div>
+            <div class="col-md-8 p-3 my-4">
+              <h3>Aria</h3>
+              <p>Paragraph</p>
+              <p><b>Background: </b>Lorem ipsum</p>
+              <p><b>Home planet: </b><a>Lumina</a></p>
+              <p><b>Color alignment: </b>Color</p>
+            </div>
+          </div>
+      
+          <!-- Moko --> 
+          <div class="row" id="voidwarperMoko">
+            <div class="col-md-4 p-3 my-4">
+              <img class="img-fluid rounded" src="images/voidwarpers/voidwarper-vervai-2.png" alt="Lorem ipsum">
+            </div>
+            <div class="col-md-8 p-3 my-4">
+              <h3>Moko</h3>
+              <p>Paragraph</p>
+              <p><b>Background: </b>Lorem ipsum</p>
+              <p><b>Home planet: </b><a>Planet</a></p>
+              <p><b>Color alignment: </b>Color</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 5.7: GAME LORE - 7. The World Outside Nexus -->
+      <div class="p-4 my-2 bg-white rounded section">
+        <p class="text-muted">SECTION 6.1</p>
+        <div class="row my-4 ">
+          <h2 id="section5.7">The World Outside Nexus</h2>
+          <p>Section intro goes here</p>
+        </div>
+    
+        <div class="row p-3 my-4 section-sub">
+          <h3>Sub-section title</h3>
+          <p>Paragraph</p>
+          <p>Paragraph</p>
+          <p>Paragraph</p>
+        </div>
+      </div>
+
+      <!-- SECTION 6: GLOSSARY - 1. Game Mechanics -->
+      <div class="p-4 my-2 bg-white rounded section">
+        <p class="text-muted">SECTION 6.1</p>
+        <div class="row my-4 ">
+          <h2 id="section6.1">Game Mechanics</h2>
+          <p>Section intro goes here</p>
+        </div>
+    
+        <!-- Game Mechanics Table -->  
+        <div class="table-responsive">
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">Game Mechanic</th>
+                <th scope="col">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Game Mechanic Name</td>
+                <td>Lorem ipsum</td>
+              </tr>
+              <tr>
+                <td>Game Mechanic Name</td>
+                <td>Lorem ipsum</td>
+              </tr>
+              <tr>
+                <td>Game Mechanic Name</td>
+                <td>Lorem ipsum</td>
+              </tr>
+              <tr>
+                <td>Game Mechanic Name</td>
+                <td>Lorem ipsum</td>
+              </tr>
+              <tr>
+                <td>Game Mechanic Name</td>
+                <td>Lorem ipsum</td>
+              </tr>
+              <tr>
+                <td>Game Mechanic Name</td>
+                <td>Lorem ipsum</td>
+              </tr>
+              <tr>
+                <td>Game Mechanic Name</td>
+                <td>Lorem ipsum</td>
+              </tr>
+              <tr>
+                <td>Game Mechanic Name</td>
+                <td>Lorem ipsum</td>
+              </tr>
+              <tr>
+                <td>Game Mechanic Name</td>
+                <td>Lorem ipsum</td>
+              </tr>
+              <tr>
+                <td>Game Mechanic Name</td>
+                <td>Lorem ipsum</td>
+              </tr>
+              <tr>
+                <td>Game Mechanic Name</td>
+                <td>Lorem ipsum</td>
+              </tr>
+              <tr>
+                <td>Game Mechanic Name</td>
+                <td>Lorem ipsum</td>
+              </tr>
+              <tr>
+                <td>Game Mechanic Name</td>
+                <td>Lorem ipsum</td>
+              </tr>
+              <tr>
+                <td>Game Mechanic Name</td>
+                <td>Lorem ipsum</td>
+              </tr>
+              <tr>
+                <td>Game Mechanic Name</td>
+                <td>Lorem ipsum</td>
+              </tr>
+              <tr>
+                <td>Game Mechanic Name</td>
+                <td>Lorem ipsum</td>
+              </tr>
+              <tr>
+                <td>Game Mechanic Name</td>
+                <td>Lorem ipsum</td>
+              </tr>
+              <tr>
+                <td>Game Mechanic Name</td>
+                <td>Lorem ipsum</td>
+              </tr>
+              <tr>
+                <td>Game Mechanic Name</td>
+                <td>Lorem ipsum</td>
+              </tr>
+              <tr>
+                <td>Game Mechanic Name</td>
+                <td>Lorem ipsum</td>
+              </tr>
+              <tr>
+                <td>Game Mechanic Name</td>
+                <td>Lorem ipsum</td>
+              </tr>
+              <tr>
+                <td>Game Mechanic Name</td>
+                <td>Lorem ipsum</td>
+              </tr>
+              <tr>
+                <td>Game Mechanic Name</td>
+                <td>Lorem ipsum</td>
+              </tr>
+              <tr>
+                <td>Game Mechanic Name</td>
+                <td>Lorem ipsum</td>
+              </tr>
+              <tr>
+                <td>Game Mechanic Name</td>
+                <td>Lorem ipsum</td>
+              </tr>
+              <tr>
+                <td>Game Mechanic Name</td>
+                <td>Lorem ipsum</td>
+              </tr>
+              <tr>
+                <td>Game Mechanic Name</td>
+                <td>Lorem ipsum</td>
+              </tr>
+              <tr>
+                <td>Game Mechanic Name</td>
+                <td>Lorem ipsum</td>
+              </tr>
+              <tr>
+                <td>Game Mechanic Name</td>
+                <td>Lorem ipsum</td>
+              </tr>
+              <tr>
+                <td>Game Mechanic Name</td>
+                <td>Lorem ipsum</td>
+              </tr>
+              <tr>
+                <td>Game Mechanic Name</td>
+                <td>Lorem ipsum</td>
+              </tr>
+              <tr>
+                <td>Game Mechanic Name</td>
+                <td>Lorem ipsum</td>
+              </tr>
+              <tr>
+                <td>Game Mechanic Name</td>
+                <td>Lorem ipsum</td>
+              </tr>
+              <tr>
+                <td>Game Mechanic Name</td>
+                <td>Lorem ipsum</td>
+              </tr>
+              <tr>
+                <td>Game Mechanic Name</td>
+                <td>Lorem ipsum</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- SECTION 6: GLOSSARY - 2. Keyword Abilities -->
+      <div class="p-4 my-2 bg-white rounded section">
+        <p class="text-muted">SECTION 6.2</p>
+        <div class="row my-4 ">
+          <h2 id="section6.2">Keyword Abilities</h2>
+          <p>Section intro goes here</p>
+        </div>
+
+        <!-- Keyword Abilities: Keywords Table -->
+        <div class="table-responsive">
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">Keyword</th>
+                <th scope="col">Description</th>
+                <th scope="col">Type</th>
+                <th scope="col">Primary Color Identities</th>
+                <th scope="col">Secondary Color Identities</th>
+                <th scope="col">Frequency</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Amplify -->
+              <tr>
+                <td>Amplify</td>
+                <td>Whenever you play a nonentity script, this entity gets +1/+1 until end of turn.</td>
+                <td>Triggered</td>
+                <td>Red</td>
+                <td>Blue, Yellow</td>
+                <td>Very infrequent</td>
+              </tr>
+              <!-- Chain -->
+              <tr>
+                <td>Chain</td>
+                <td>If you played a script this turn, add [effect] to this card.</td>
+                <td>Triggered</td>
+                <td>Red</td>
+                <td>Blue, Purple</td>
+                <td>Infrequent</td>
+              </tr>
+              <!-- Channel -->
+              <tr>
+                <td>Channel</td>
+                <td>Description</td>
+                <td>Paragraph</td>
+                <td>Paragraph</td>
+                <td>Paragraph</td>
+                <td>Paragraph</td>
+              </tr>
+              <!-- Cycle -->
+              <tr>
+                <td>Cycle</td>
+                <td>Cycle [cost] (Discard this card: draw a card).</td>
+                <td>Activated</td>
+                <td>All Colors</td>
+                <td>Yellow, Red</td>
+                <td>Very infrequent</td>
+              </tr>
+              <!-- Deploy -->
+              <tr>
+                <td>Deploy</td>
+                <td>Whenever this card enters the battlezone, [effect].</td>
+                <td>Triggered</td>
+                <td>All Colors</td>
+                <td></td>
+                <td>Very frequent</td>
+              </tr>
+              <!-- Despawn -->
+              <tr>
+                <td>Despawn</td>
+                <td>Whenever this entity dies, [effect].</td>
+                <td>Triggered</td>
+                <td>Purple</td>
+                <td>Yellow, Red, Green</td>
+                <td>Frequent</td>
+              </tr>
+              <!-- Dual strike -->
+              <tr>
+                <td>Dual strike</td>
+                <td>This entity deals both quick strike and normal combat damage.</td>
+                <td>Static</td>
+                <td>Red, Yellow</td>
+                <td></td>
+                <td>Infrequent</td>
+              </tr>
+              <!-- Encrypt -->
+              <tr>
+                <td>Encrypt</td>
+                <td>This permanent can’t be the target of scripts or abilities your opponents control.</td>
+                <td>Static</td>
+                <td>Blue</td>
+                <td>Green</td>
+                <td>Infrequent</td>
+              </tr>
+              <!-- Encrypt from [kind] -->
+              <tr>
+                <td>Encrypt from [kind]</td>
+                <td>This permanent can’t be the target of [kind] scripts your opponent controls or [kind] abilities your opponents control.</td>
+                <td>Static</td>
+                <td>Blue</td>
+                <td>Green</td>
+                <td>Very infrequent</td>
+              </tr>
+              <!-- Exploit -->
+              <tr>
+                <td>Exploit</td>
+                <td>Whenever a create with exploit deals combat damage to an opponent, draw a card, then discard a card.</td>
+                <td>Triggered</td>
+                <td>Blue</td>
+                <td>Purple, Red</td>
+                <td>Very infrequent</td>
+              </tr>
+              <!-- Firewall [cost] -->
+              <tr>
+                <td>Firewall [cost]</td>
+                <td>Whenever this entity becomes the target of a script or ability an opponent controls, counter it unless that player pays [cost].</td>
+                <td>Triggered</td>
+                <td>Yellow, Green</td>
+                <td>All Colors</td>
+                <td>Frequent</td>
+              </tr>
+              <!-- Flash -->
+              <tr>
+                <td>Flash</td>
+                <td>You may play this script any time you could play an interrupt.</td>
+                <td>Static</td>
+                <td>Blue, Yellow</td>
+                <td>All Colors</td>
+                <td>You may play this script any time you could play an interrupt.</td>
+              </tr>
+              <!-- Flight -->
+              <tr>
+                <td>Flight</td>
+                <td>This entity can’t be defended except by entities with flight or intercept.</td>
+                <td>Static</td>
+                <td>Yellow, Blue, Purple, Red</td>
+                <td>Green</td>
+                <td>Very Frequent</td>
+              </tr>
+              <!-- Hack -->
+              <tr>
+                <td>Hack</td>
+                <td>Take control of target entity an opponent controls until end of turn.</td>
+                <td></td>
+                <td>Red</td>
+                <td></td>
+                <td>Infrequent</td>
+              </tr>
+              <!-- Hologram -->
+              <tr>
+                <td>Hologram</td>
+                <td>Spawn a copy of target entity. Expel it at the end of your next turn.</td>
+                <td>Static</td>
+                <td>Yellow</td>
+                <td>Red, Purple</td>
+                <td>Very infrequent</td>
+              </tr>
+              <!-- Indestructible -->
+              <tr>
+                <td>Indestructible</td>
+                <td>Damage and effects that would destroy this don’t.</td>
+                <td>Static</td>
+                <td>Yellow</td>
+                <td>Green, Purple, All Colors</td>
+                <td>Infrequent</td>
+              </tr>
+              <!-- Intercept -->
+              <tr>
+                <td>Intercept</td>
+                <td>Damage dealt by this card causes you to gain that much health.</td>
+                <td>Static</td>
+                <td>Green</td>
+                <td>Red</td>
+                <td>Frequent</td>
+              </tr>
+              <!-- Leech -->
+              <tr>
+                <td>Leech</td>
+                <td>Damage dealt by this card causes you to gain that much health.</td>
+                <td>Triggered</td>
+                <td>Yellow</td>
+                <td>Purple</td>
+                <td>Frequent</td>
+              </tr>
+              <!-- Network -->
+              <tr>
+                <td>Network</td>
+                <td>Tap any number of untapped entities you control. For each one, this script costs ❶ less or one less energy of that entity’s color to play this turn.</td>
+                <td>Activated</td>
+                <td>Green</td>
+                <td>Yellow, Blue</td>
+                <td>Very infrequent</td>
+              </tr>
+              <!-- Nullify N -->
+              <tr>
+                <td>Nullify N</td>
+                <td>When this entity deals combat damage to an opponent, expels the top N cards from their deck.</td>
+                <td>Triggered</td>
+                <td>Purple</td>
+                <td>Blue</td>
+                <td>Infrequent</td>
+              </tr>
+              <!-- Overpower -->
+              <tr>
+                <td>Overpower</td>
+                <td>This entity deals any excess combat damage to the player or voidwarper it’s attacking.</td>
+                <td>Triggered</td>
+                <td>Green</td>
+                <td>Red, Purple</td>
+                <td>Very frequent</td>
+              </tr>
+              <!-- Pilot N -->
+              <tr>
+                <td>Pilot N</td>
+                <td>Crew N (Tap any number of untapped entities you control with total attack N or greater: This permanent becomes a machine entity until end of turn.)</td>
+                <td>Activated</td>
+                <td>All Colors</td>
+                <td></td>
+                <td>Frequent</td>
+              </tr>
+              <!-- Quick strike -->
+              <tr>
+                <td>Quick strike</td>
+                <td>This entity deals combat damage before entities without quick strike.</td>
+                <td>Static</td>
+                <td>Yellow, Red</td>
+                <td>Green</td>
+                <td>Frequent</td>
+              </tr>
+              <!-- Rapid -->
+              <tr>
+                <td>Rapid</td>
+                <td>This entity can attack and (↻) the turn it comes under your control.</td>
+                <td>Static</td>
+                <td>Red</td>
+                <td>Purple</td>
+                <td>Frequent</td>
+              </tr>
+              <!-- Scan N -->
+              <tr>
+                <td>Scan N</td>
+                <td>Scan N (Look at the top N cards of your deck, then put any number of them on the bottom of your deck and the rest on top in any order.)</td>
+                <td>Triggered</td>
+                <td>Blue, Green</td>
+                <td>All Colors</td>
+                <td>Frequent</td>
+              </tr>
+              <!-- Shield -->
+              <tr>
+                <td>Shield</td>
+                <td>If this permanent would be dealt damage (if its an entity) or be destroyed, instead it loses shield.</td>
+                <td>Static</td>
+                <td>Yellow</td>
+                <td>Blue, Green</td>
+                <td>Very infrequent</td>
+              </tr>
+              <!-- Spawn -->
+              <tr>
+                <td>Spawn</td>
+                <td>Put N [supertype and/or subtype(s)] [permanent] token(s) in the battlezone.</td>
+                <td>Triggered</td>
+                <td>All Colors</td>
+                <td></td>
+                <td>Infrequent</td>
+              </tr>
+              <!-- Stasis -->
+              <tr>
+                <td>Stasis</td>
+                <td>This entity does not untap during its controller’s untap step.</td>
+                <td>Static</td>
+                <td>Blue</td>
+                <td></td>
+                <td>Very infrequent</td>
+              </tr>
+              <!-- Steadfast -->
+              <tr>
+                <td>Steadfast</td>
+                <td>This entity can attack without tapping.</td>
+                <td>Static</td>
+                <td>Yellow, Green</td>
+                <td>Blue</td>
+                <td>Frequent</td>
+              </tr>
+              <!-- Threat -->
+              <tr>
+                <td>Threat</td>
+                <td>This entity can be defended only by two or more defenders.</td>
+                <td>Static</td>
+                <td>Purple, Red</td>
+                <td></td>
+                <td>Infrequent</td>
+              </tr>
+              <!-- Virus -->
+              <tr>
+                <td>Virus</td>
+                <td>If this card deals at least one damage to an entity it’s enough to destroy it.</td>
+                <td>Triggered</td>
+                <td>Purple</td>
+                <td>Green</td>
+                <td>Infrequent</td>
+              </tr>
+              <!-- Wormhole -->
+              <tr>
+                <td>Wormhole</td>
+                <td>Wormhole — Whenever [condition], until end of turn, you may play one card from your graveyard.</td>
+                <td>Triggered</td>
+                <td>Purple</td>
+                <td>Yellow, Blue</td>
+                <td>Very infrequent</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- SECTION 6: GLOSSARY - 3. Other Abilities -->
+      <div class="p-4 my-2 bg-white rounded section">
+        <p class="text-muted">SECTION 6.3</p>
+        <div class="row my-4 ">
+          <h2 id="section6.3">Other Abilities</h2>
+          <p>Section intro goes here</p>
+        </div>
+
+        <!-- Other Abilities: Abilities Table -->
+        <div class="table-responsive">
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+                <th>Ability</th>
+                <th>Ability Type</th>
+                <th>Game Design Properties</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- X Counters -->
+              <tr>
+                <td>X Counters</td>
+                <td>Static</td>
+                <td>Primary: All Colors<br>Secondary: Yellow, Green<br>Frequency: Infrequent</td>
+                <td>How many counters of a given type should be put on a permanent.</td>
+              </tr>
+              <!-- +1/+1 Counter -->
+              <tr>
+                <td>+1/+1 Counter</td>
+                <td>Static</td>
+                <td>Primary: All Colors<br>Secondary: Yellow, Green<br>Frequency: Very Frequent</td>
+                <td>A counter that gives a permanent +1 attack and +1 defense as long as its an entity, and for as long as the counter remains on the entity.</td>
+              </tr>
+              <!-- -1/-1 Counter -->
+              <tr>
+                <td>-1/-1 Counter</td>
+                <td>Static</td>
+                <td>Primary: Purple<br>Secondary: Green<br>Frequency: Extremely Infrequent</td>
+                <td>A counter that gives a permanent -1 attack and -1 defense as long as its an entity, and for as long as the counter remains on the entity.</td>
+              </tr>
+              <!-- [Keyword] Counter -->
+              <tr>
+                <td>[Keyword] Counter</td>
+                <td>Static</td>
+                <td>Primary: All Colors<br>Frequency: Extremely Infrequent</td>
+                <td>A keyword counter gives a permanent one of the evergreen keywords (encrypt, flight, indestructible, intercept, leech, overpower, quick strike, rapid, steadfast, threat, virus) for as long as it remains on the permanent. Typically, only entities can benefit from keyword counters.</td>
+              </tr>
+              <!-- Becomes the Target -->
+              <tr>
+                <td>Becomes the Target</td>
+                <td>Triggered</td>
+                <td>Primary: Blue, Green<br>Secondary: All Colors<br>Frequency: Very Infrequent</td>
+                <td>When a permanent becomes targeted by a script or ability, it is considered targeted. Some permanents have an effect that triggers when that happens.</td>
+              </tr>
+              <!-- Brawl -->
+              <tr>
+                <td>Brawl</td>
+                <td>Activated</td>
+                <td>Primary: Greene<br>Secondary: Red<br>Frequency: Extremely Infrequent</td>
+                <td>When an entity brawls with another enemy entity, they deal their attack damage to each other. This can happen outside of combat.</td>
+              </tr>
+              <!-- Can't Activate Abilities -->
+              <tr>
+                <td>Can't Activate Abilities</td>
+                <td>Static</td>
+                <td>Primary: Yellow<br>Secondary: Blue<br>Frequency: Extremely Infrequent</td>
+                <td>A permanent cannot activate any of its activated abilities. Triggered and static abilities are unaffected.</td>
+              </tr>
+              <!-- Can't Attack -->
+              <tr>
+                <td>Can't Attack</td>
+                <td>Static</td>
+                <td>Primary: Yellow<br>Secondary: Blue<br>Frequency: Very Infrequent</td>
+                <td>An entity cannot attack.</td>
+              </tr>
+              <!-- Can't Defend -->
+              <tr>
+                <td>Can't Defend</td>
+                <td>Static</td>
+                <td>Primary: Red<br>Secondary: Yellow<br>Frequency: Frequent</td>
+                <td>An entity cannot defend.</td>
+              </tr>
+              <!-- Copy -->
+              <tr>
+                <td>Copy</td>
+                <td>Activated</td>
+                <td>Primary: Blue<br>Secondary: Red, Green<br>Frequency: Infrequent</td>
+                <td>When copying a permanent, create a token or tokens that are copies of the copied card. When copying a script, create a copy of the script that goes on the stack. If the script is a permanent, it becomes a permanent copy when it resolves.</td>
+              </tr>
+              <!-- Cost Less -->
+              <tr>
+                <td>Cost Less</td>
+                <td>Static</td>
+                <td>Primary: All Colors<br>Frequency: Infrequent</td>
+                <td>Decreases the energy cost of something.</td>
+              </tr>
+              <!-- Cost More -->
+              <tr>
+                <td>Cost More</td>
+                <td>Static</td>
+                <td>Primary: Yellow<br>Secondary: Colorless<br>Frequency: Very Infrequent</td>
+                <td>Increases the energy cost of something.</td>
+              </tr>
+              <!-- Enhance -->
+              <tr>
+                <td>Enhance</td>
+                <td>Static</td>
+                <td>Primary: All Colors<br>Frequency: Very Frequent</td>
+                <td>Permanents with augmentations attached to them are considered enhanced.</td>
+              </tr>
+              <!-- Equip -->
+              <tr>
+                <td>Equip</td>
+                <td>Activated</td>
+                <td>Primary: Colorless, Yellow, Red<br>Secondary: All Colors<br>Frequency: Frequent</td>
+                <td>Attach an equipment to an entity.</td>
+              </tr>
+              <!-- Gain Energy -->
+              <tr>
+                <td>Gain Energy</td>
+                <td>Triggered</td>
+                <td>Primary: Green<br>Secondary: All Colors<br>Frequency: Frequent</td>
+                <td>Add energy to your energy pool. Unspent energy expires at the end of the current phase.</td>
+              </tr>
+              <!-- Gain Health -->
+              <tr>
+                <td>Gain Health</td>
+                <td>Triggered</td>
+                <td>Primary: Yellow<br>Secondary: Green, Purple<br>Frequency: Very Frequent</td>
+                <td>Increases a player’s health total by an amount.</td>
+              </tr>
+              <!-- Lose Health -->
+              <tr>
+                <td>Lose Health</td>
+                <td>Triggered</td>
+                <td>Primary: Purple<br>Frequency: Frequent</td>
+                <td>Decrease a player’s health total by an amount. Life loss is not damage, and cannot be prevented in any way.</td>
+              </tr>
+              <!-- Lose the Game -->
+              <tr>
+                <td>Lose the Game</td>
+                <td>Triggered</td>
+                <td>Primary: Purple<br>Secondary: Yellow<br>Frequency: Extremely Infrequent</td>
+                <td>Some cards have an ability that makes the player who’s card it is win the game right away when it resolves. Because the effect is so powerful it is very rare, and comes with a set of conditions which must be fulfilled in order for the ability to trigger. Typically, this is a purple ability but some yellow permanents will prevent their owners from losing the game, hence the wording showing up on those cards as well.</td>
+              </tr>
+              <!-- Merge -->
+              <tr>
+                <td>Merge</td>
+                <td>Triggered</td>
+                <td>Primary: Green<br>Secondary: Purple, Yellow<br>Frequency: Extremely Infrequent</td>
+                <td>Combines one or more entities into a single entity, gaining all the entities’ abilities and their total attack and defense. Also moves any and all counters, gear, and augmentations on those entities to the merged entity.</td>
+              </tr>
+              <!-- Pay Health -->
+              <tr>
+                <td>Pay Health</td>
+                <td>Activated</td>
+                <td>Primary: Purple<br>Frequency: Infrequent</td>
+                <td>Some abilities cost health instead of energy. A player cannot pay health if it would result in them having 0 or less health.</td>
+              </tr>
+              <!-- Pick one — -->
+              <tr>
+                <td>Pick one —</td>
+                <td>Activated</td>
+                <td>Primary: All Colors<br>Frequency: Infrequent</td>
+                <td>An ability that lets player’s choose one or more effects from a set of options. Only the chosen effects resolve.</td>
+              </tr>
+              <!-- Put Into the Battlezone -->
+              <tr>
+                <td>Put Into the Battlezone</td>
+                <td>Activated</td>
+                <td>Primary: All Colors<br>Frequency: Frequent</td>
+                <td>Immediately puts a permanent into the battlezone without the player having to play the card.</td>
+              </tr>
+              <!-- Shield Counter -->
+              <tr>
+                <td>Shield Counter</td>
+                <td>Static</td>
+                <td>Primary: Yellow<br>Secondary: Green, Blue<br>Frequency: Extremely Infrequent</td>
+                <td>While a permanent has a shield counter on it, any effect that would destroy it (including damage if it’s an entity) is prevented, then the shield counter is removed.</td>
+              </tr>
+              <!-- Swap -->
+              <tr>
+                <td>Swap</td>
+                <td>Activated</td>
+                <td>Primary: Blue<br>Secondary: Red<br>Frequency: Extremely Infrequent</td>
+                <td>Exchanges control of a permanent one player controls, and another permanent another player controls. Usually, these are of the same card type.</td>
+              </tr>
+              <!-- Take Control -->
+              <tr>
+                <td>Take Control</td>
+                <td>Activated</td>
+                <td>Primary: Blue<br>Secondary: Red<br>Frequency: Very Frequent</td>
+                <td>Transfer control of a permanent from one player to another. The player who the permanent originally belonged to is still the owner of the permanent.</td>
+              </tr>
+              <!-- Tap -->
+              <tr>
+                <td>Tap</td>
+                <td>Activated</td>
+                <td>Primary: All Colors<br>Secondary: Yellow<br>Frequency: Very Frequent</td>
+                <td>Tap a permanent.</td>
+              </tr>
+              <!-- Untap -->
+              <tr>
+                <td>Untap</td>
+                <td>Activated</td>
+                <td>Primary: All Colors<br>Secondary: Greene<br>Frequency: Frequent</td>
+                <td>Untap a permanent.</td>
+              </tr>
+              <!-- Win the Game -->
+              <tr>
+                <td>Win the Game</td>
+                <td>Triggered</td>
+                <td>Primary: Yellow<br>Secondary: Blue, Purple, Red<br>Frequency: Extremely Infrequent</td>
+                <td>Some cards have an ability that makes the player who’s card it is win the game right away when it resolves. Because the effect is so powerful it is very rare, and comes with a set of conditions which must be fulfilled in order for the ability to trigger.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Main Medium Container End -->
+      </div>
+    </main>
+
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <p class="col-md-4 mb-0 text-body-secondary">Nexus: Voidwarpers</p>
+    
+        <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+          <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+        </a>
+    
+        <ul class="nav col-md-4 justify-content-end">
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Game Rules</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Cards</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Join the Discord</a></li>
+        </ul>
+      </footer>
+    </div>
+    
+    <!-- JS -->
+  <script src="index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
