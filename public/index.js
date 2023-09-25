@@ -12,7 +12,8 @@ function mapEnergyToFile(energy) {
     '3': 'Number=3',
     '4': 'Number=4',
     '5': 'Number=5',
-    '6': 'Number=6'
+    '6': 'Number=6',
+    'U': 'Blue'
   };
   return energyMap[energy] || energy;
 }
@@ -71,7 +72,8 @@ cardTextBox.innerHTML = ''; // Clear existing text
     flavorTextParagraph.innerText = 'Flavor text here'; // Replace with actual flavor text
     cardTextBox.appendChild(flavorTextParagraph);
   }
-  
+
+  console.log(cardData);
   // Update card stats
   const cardStats = document.querySelector('.frame-stats p');
   if (cardData["Card Type"] === "Entity" || cardData["Card Type"] === "Voidwarper") {

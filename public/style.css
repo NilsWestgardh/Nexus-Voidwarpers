@@ -553,6 +553,111 @@ border: 5px solid var(--black);
  top: 4.72px;
 }
 
+/* LANDING PAGE CUSTOM STYLES */
+
+/* LANDING PAGE CUSTOM STYLES */
+
+/* Custom h1 for landing page */
+.landing-h1 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+/* Custom label for input field */
+.custom-label {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Custom Input Field */
+.custom-input {
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  resize: both;
+  overflow: auto;
+  min-height: 150px;
+  text-align: start;
+}
+
+textarea {
+  resize: vertical; /* Allows vertical resizing */
+  overflow: auto;  /* Ensures the content fits */
+  min-height: 50px; /* Sets a minimum height */
+  width: 100%; /* Takes up full width */
+}
+
+/* Custom Button with Magic Icon */
+.custom-btn {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+/* Custom Magic Icon */
+.bi-magic {
+  margin-left: 0.5rem;
+}
+
+/* Custom Pills */
+.custom-pill-header {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  border-radius: 1rem;
+}
+
+/* Card Generator Container */
+.card-generator-container {
+  margin-top: 2rem;
+}
+
+/* Input Field */
+.form-control {
+  font-size: 1.2rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+/* Generate Button */
+.btn {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+/* Button Icon */
+.bi-arrow-right-circle {
+  margin-left: 0.5rem;
+}
+
+/* Headline and Subheader */
+h1, h2 {
+  font-weight: 700;
+}
+
+/* Paragraph */
+p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* Pills */
+.badge {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  border-radius: 1rem;
+}
+
+/* Responsive Layout */
+@media (max-width: 992px) {
+  .col-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
 /* RESPONSIVE STYLES */
 
 /* Large */

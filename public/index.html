@@ -36,7 +36,7 @@
   </nav>
 
   <!-- MAIN CONTENT -->
-  <div class="container-md bg-dark">
+  <div class="container-md">
       <div class="row">
         <div class="col-6">
           <!-- CARD RENDER -->
@@ -85,19 +85,26 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col-6 p-5">
         <!-- CARD GENERATOR -->
-        <div class="col-6 p-3 rounded bg-light">
-          <h1>Card Generator</h1>
-          <h2>Text goes here</h2>
-          <div class="card-generator-container">
-            <label for="openai-prompt">OpenAI Prompt:</label>
-            <input type="text" id="openai-prompt" name="openai-prompt">
-            <button type="button" onclick="generateCard()">Generate Card</button>
-          </div>
+        <div class="mb-3">
+          <span class="badge bg-primary mx-1 py-2 px-3 custom-pill-header">AI-enabled</span>
+          <span class="badge bg-primary mx-1 py-2 px-3 custom-pill-header">User-generated</span>
+          <span class="badge bg-primary mx-1 py-2 px-3 custom-pill-header">Digital trading card game</span>
+        </div>
+        <h1 lcass="landing-h1">Imagine it. Create it. Play it.</h1>
+        <h2 class="mb-4">Nexus: Voidwarpers</h2>
+        <p class="mb-4">Nexus uses the <i>magic</i> of generative AI to let the community not only play, but make cards for the game.</p>
+        <div class="card-generator-container">
+          <label for="openai-prompt" class="form-label custom-label">Create your first card</label>
+          <textarea id="openai-prompt" name="openai-prompt" rows="4" placeholder="Describe your card idea to generate a card"></textarea>
+          <button type="button" class="btn btn-primary mt-3 custom-btn" onclick="generateCard()">
+            Generate Card <i class="bi bi-magic"></i></i>
+          </button>
         </div>
       </div>
     </div>
+  </div>
 
   <!-- JS -->
   <script src="index.js"></script>

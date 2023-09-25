@@ -69,7 +69,7 @@ Return the card details as a JSON object with the following keys:
 "Card Grade": Based on the card's power level. (Common > Uncommon > Rare > Prime)
 "Card Text": [Ability/Effect 1], [Ability/Effect 2], [Ability/Effect 3], etc. Typically 1-3 abilities or effects, though up to 5-6 allowed. Typically higher grade = more abilities/effects. Stick to existing game rules and mechanics. (e.g., "Deploy — Return up to one target machine card from your cache to your hand. (This triggers whenever this card enters the battlezone.)")
 "Card Stats": Include only for Entity or Voidwarper types. (e.g., "4/4" for Entity, "5" for Voidwarper)
-"Card Art": Write a DALL-E prompt for the artwork with this formatting: "Concept art, digital painting, trading card game style, sci-fi, fantasy. [Subject matter]. [Composition], [Art direction]."
+"Card Art": Write a DALL-E prompt for the artwork with this formatting: "Artstation style, concept art, digital painting, trading card game style, sci-fi, fantasy. [Short, explicit instruction for subject matter]. Dramatic mood, [Short, explicit instruction for composition]."
 Prioritize in order if tokens are limited: "Card Text", "Card Type", "Card Name"
   `;
 
