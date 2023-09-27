@@ -1,5 +1,6 @@
 // Importing the required modules
 const express = require('express');
+const cors = require('cors');
 const { createClient } = require('@supabase/supabase-js');
 
 // Dynamic import for node-fetch
@@ -16,6 +17,9 @@ const supabase = createClient("https://ysrdbmhovvypyaqxylqj.supabase.co", proces
 
 // Initialize the Express app
 const app = express();
+
+// Enable CORS for all routes
+app.use(cors());
 
 // Middleware to parse JSON requests
 app.use(express.json());

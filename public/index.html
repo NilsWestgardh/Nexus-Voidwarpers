@@ -6,6 +6,10 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@latest/dist/umd/supabase.min.js"></script>
+  <script>
+    window.createClient = supabase.createClient;
+  </script>
 </head>
 <body class="bg-light">
 
@@ -92,22 +96,28 @@
           <span class="badge bg-primary mx-1 py-2 px-3 custom-pill-header">User-generated</span>
           <span class="badge bg-primary mx-1 py-2 px-3 custom-pill-header">Digital trading card game</span>
         </div>
-        <h1 lcass="landing-h1">Imagine it. Create it. Play it.</h1>
+        <h1 class="landing-h1">Imagine it. Create it. Play it.</h1>
         <h2 class="mb-4">Nexus: Voidwarpers</h2>
         <p class="mb-4">Nexus uses the <i>magic</i> of generative AI to let the community not only play, but make cards for the game.</p>
         <div class="card-generator-container">
           <label for="openai-prompt" class="form-label custom-label">Create your first card</label>
           <textarea id="openai-prompt" name="openai-prompt" rows="4" placeholder="Describe your card idea to generate a card"></textarea>
-          <button type="button" class="btn btn-primary mt-3 custom-btn" onclick="generateCard()">
-            Generate Card <i class="bi bi-magic"></i></i>
+          <button type="button" class="btn btn-primary mt-3 custom-btn">
+            Generate Card <i class="bi bi-magic"></i>
           </button>
         </div>
       </div>
     </div>
   </div>
 
+  <!-- Supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@latest/dist/umd/supabase.min.js"></script>
+  <script>
+    window.createClient = supabase.createClient;
+  </script>
+  
   <!-- JS -->
-  <script src="index.js"></script>
+  <script type="module" src="index.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -434,10 +434,19 @@ border: 5px solid var(--black);
 /* Card Text */ 
 .card-name,
 .card-type, {
-  font-size: 1.25em;
+  font-size: 24px;
+  line-height: 28px;
+  margin: 0;
   margin-left: 1.8%;
-  align-self: baseline;
-  font-weight: 600;
+  align-self: center;
+  font-weight: 700;
+}
+
+/* Text Vertical Alignment Override*/ 
+.card-name,
+.card-type {
+  margin: 0;  /* Remove any default margin */
+  line-height: 40px;  /* Match the height of the parent div */
 }
 
 /* Card Art Box */ 
@@ -554,9 +563,6 @@ border: 5px solid var(--black);
 }
 
 /* LANDING PAGE CUSTOM STYLES */
-
-/* LANDING PAGE CUSTOM STYLES */
-
 /* Custom h1 for landing page */
 .landing-h1 {
   font-size: 3rem;
@@ -698,7 +704,8 @@ p {
 
   .card-name,
   .card-type {
-    font-size: 1.12em;
+    font-size: 22px;
+    line-height: 24px;
   }
 
   .frame-art {
@@ -778,7 +785,8 @@ p {
 
   .card-name,
   .card-type {
-    font-size: 1em;
+    font-size: 20px;
+    line-height: 20px;
   }
 
   .frame-art {
@@ -859,7 +867,8 @@ p {
 
   .card-name,
   .card-type {
-    font-size: 1em;
+    font-size: 18px;
+    line-height: 18px;
   }
 
   .frame-art {

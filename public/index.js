@@ -1,3 +1,32 @@
+// Initialize Supabase
+const supabaseUrl = 'https://ysrdbmhovvypyaqxylqj.supabase.co';
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlzcmRibWhvdnZ5cHlhcXh5bHFqIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODc3ODM4MTQsImV4cCI6MjAwMzM1OTgxNH0.ZDgPFs-T8SwuCih5d_7hRdG7wqDvHzUYqx5DGLNhHT8';
+const supabase = window.createClient(supabaseUrl, supabaseKey);
+
+// Google Sign-In
+async function signInWithGoogle() {
+  const { user, error } = await supabase.auth.signIn({
+    provider: 'google'
+  });
+  // Handle user and error accordingly
+}
+
+// Create Card in Supabase
+async function createCardInSupabase(cardName, cardData) {
+  console.log("createCardInSupabase function is running");
+  const { data, error } = await supabase
+    .from('Cards')
+    .insert([
+      { card_name: cardName, card_data: cardData },
+    ]);
+
+  if (data) {
+    console.log("Card successfully inserted:", data);
+  } else if (error) {
+    console.error("Error inserting card:", error);
+  }
+}
+
 // Function to map shorthand energy to actual file name
 function mapEnergyToFile(energy) {
   const energyMap = {
@@ -20,6 +49,7 @@ function mapEnergyToFile(energy) {
 
 // Function to update the card
 function updateCard(cardData) {
+  console.log("updateCard function is running");
   // Update card color background
   const cardBackground = document.querySelector('.card-background');
   cardBackground.className = `card-background card-bg-${cardData["Card Color"].toLowerCase()}`;
@@ -91,6 +121,7 @@ cardTextBox.innerHTML = ''; // Clear existing text
 
 // Function to generate a card
 async function generateCard() {
+  console.log("generateCard function is running");
   // Get the prompt from the input field
   const prompt = document.getElementById("openai-prompt").value;
 
@@ -112,4 +143,26 @@ async function generateCard() {
 }
 
 // Attach the function to the button
-document.querySelector("button").addEventListener("click", generateCard);
+document.querySelector("button").addEventListener("click", async () => {
+  console.log("Button clicked!");
+  await generateCard();
+
+  // Populate cardData from DOM elements
+  const cardName = document.querySelector('.card-name').textContent;
+  const cardType = document.querySelector('.card-type').textContent;
+  const cardGrade = document.querySelector('.card-set-icon').src.split("=").pop().split(".")[0];
+  const cardStats = document.querySelector('.frame-stats p').textContent;
+  const cardArt = document.querySelector('.frame-art img').src;
+
+  // Create an object to hold the card data
+  const cardData = {
+    cardName,
+    cardType,
+    cardGrade,
+    cardStats,
+    cardArt
+  };
+
+  // Save it to Supabase
+  await createCardInSupabase(cardName, cardData);
+});
