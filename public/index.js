@@ -4,6 +4,99 @@ document.addEventListener("DOMContentLoaded", function() {
   console.log("DOM fully loaded and parsed");
 });
 
+function mapMTGToNexus(term) {
+  const termMap = {
+    // Colors
+    'White': 'Yellow',
+    'Black': 'Purple',
+    
+    // Card Types
+    'Sorcery': 'Sequence',
+    'Instant': 'Interrupt',
+    'Enchantment': 'Enhancement',
+    'Aura': 'Augmentation',
+    'Artifact': 'Machine',
+    'Vehicle': 'Craft',
+    'Equipment': 'Weapon',
+    'Creature': 'Entity',
+    'Minion': 'Entity',
+    'Planeswalker': 'Voidwarper',
+    'Legendary': 'Mythical',
+    'Land': 'Source',
+    'Energy Crystal': 'Source',
+    'Basic': 'Base',
+
+    // Card Parts
+    'Rarity': 'Grade',
+    'Mythic': 'Prime',
+    'Power': 'Attack',
+    'Toughness': 'Defense',
+    'Loyalty': 'Allegiance',
+
+    // Keyword Abilities
+    'Trample': 'Overpower',
+    'Flying': 'Flight',
+    'Haste': 'Rapid',
+    'Charge': 'Rapid',
+    'Vigilance': 'Steadfast',
+    'First strike': 'Quick strike',
+    'Deathtouch': 'Virus',
+    'Lifelink': 'Leech',
+    'Hexproof': 'Firewall',
+    'Menace': 'Threat',
+    'Double strike': 'Dual strike',
+    'Reach': 'Intercept',
+    'Prowess': 'Amplify',
+    'Convoke': 'Network',
+    'Scry': 'Scan',
+    'Defender': '',
+    'Intimidate': '',
+    'Shroud': '',
+    'Protection': '',
+
+    // Game Zones
+    'Battlefield': 'Battlezone',
+    'Graveyard': 'Cache',
+    'Exile': 'Archive',
+    'Library': 'Deck',
+    'Hand': 'Hand',
+    'Stack': 'Stack',
+
+    // Steps and phases
+    'Upkeep': 'Maintainance',
+    'Main phase': 'Primary phase',
+    'End step': 'Clear step',
+
+    // Entities
+    'Merfolk': 'Nymph',
+
+    // Mechanics
+    'Mechanic': 'Mechanic',
+
+    // Terms
+    'Spell': 'Script',
+    'Cast': 'Play',
+    'Mana': 'Energy',
+    'Blocking': 'Defending',
+    'Blockers': 'Defenders',
+    'Block': 'Defend',
+    'Unblockable': 'Undefendable',
+    'Blocked': 'Defended',
+    'Creatures': 'Entities',
+    'Create': 'Spawn',
+    'Life': 'Health',
+    'Counter target': 'Cancel target',
+    'Equip': 'Arm',
+    'Enchant': 'Augment',
+    'Gain control': 'Take control',
+    'Fight': 'Brawl',
+    'Mill': 'Erase'
+  };
+
+  return termMap[term] || term;
+}
+
+
 // Function to map shorthand energy to actual file name
 function mapEnergyToFile(energy) {
   const energyMap = {
@@ -25,6 +118,18 @@ function mapEnergyToFile(energy) {
 
 // Function to update the card
 function updateCard(cardData) {
+  console.log(cardData)
+
+  function clearCard() {
+  document.querySelector('.card-name').textContent = '';
+  document.querySelector('.card-cost').innerHTML = '';
+  document.querySelector('.card-type').textContent = '';
+  document.querySelector('.card-set-icon').src = '';
+  document.querySelector('.frame-text-box').innerHTML = '';
+  document.querySelector('.frame-stats p').textContent = '';
+  document.querySelector('.frame-art img').src = '';
+}
+  
   // Update card color background
   const cardBackground = document.querySelector('.card-background');
   cardBackground.className = `card-background card-bg-${cardData["Card Color"].toLowerCase()}`;
@@ -37,6 +142,7 @@ function updateCard(cardData) {
   const cardCost = document.querySelector('.card-cost');
   cardCost.innerHTML = '';  // Clear existing cost icons
   const energyCost = cardData["Card Energy Cost"];
+  if (energyCost && energyCost.match(/\{[0-9A-Z]+\}/g)) {
   energyCost.match(/\{[0-9A-Z]+\}/g).forEach(icon => {
     const mappedEnergy = mapEnergyToFile(icon.replace(/[{}]/g, ''));
     
@@ -48,6 +154,7 @@ function updateCard(cardData) {
       cardCost.appendChild(img);
     }
   });
+  }
   
   // Update card type
   const cardType = document.querySelector('.card-type');
@@ -69,7 +176,10 @@ function updateCard(cardData) {
     if (index === 0) {
       newParagraph.className += ' ftb-inner-margin'; // Add margin to the first paragraph
     }
-    newParagraph.innerText = text;
+    // Convert MTG terms to Nexus terms
+    const convertedText = text.split(' ').map(word => mapMTGToNexus(word)).join(' ');
+
+    newParagraph.innerText = convertedText;
     cardTextBox.appendChild(newParagraph);
   });
   

@@ -7,7 +7,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-light">
+<body class="bg-light mb-0 pb-0">
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container-lg">
@@ -33,8 +33,9 @@
       </div>
     </div>
   </nav>
-  <!-- MAIN CONTENT -->
-  <div class="container-md">
+  
+  <!-- CARD GENERATOR HEADER -->
+  <div class="container-md pt-4 pb-4">
     <div class="row">
       <div class="col-6 mt-5 mb-5">
         <!-- CARD RENDER -->
@@ -42,34 +43,33 @@
             <div class="card-background card-bg-default">
               <div class="card-frame">
                 <div class="frame-header frame-color-default">
-                  <p class="card-name">Card Name</p>
+                  <p class="card-name">Your card's name</p>
                   <!-- Cost Symbols -->
                   <div class="card-cost">
-                    <img class="img-fluid card-cost-icon" src="images/icons/Number=0.png" alt="...">
-                    <img class="img-fluid card-cost-icon" src="images/icons/Energy=Colorless.png" alt="...">
+                    <!--  <img class="img-fluid card-cost-icon" src="images/icons/Energy=Colorless.png" alt="...">  -->
                   </div>
                 </div>
         
                 <!-- Art Box -->
                 <div class="frame-art">
-                  <img class="img-fluid card-art" src="images/art/nexus-voidwarpers-dimlit-dunes.png" alt="...">
+                  <img class="img-fluid card-art" src="images/nexus-card-default-art.png" alt="...">
                 </div>
     
                 <div class="frame-type-line frame-color-default">
-                  <p class="card-type">Type — Subtype</p>
+                  <p class="card-type">Card type</p>
                   <img class="img-fluid card-set-icon" src="images/icons/Style=Medal, Quality=Prime.png" alt="...">
                 </div>
         
                 <div class="frame-text-box text-box-color-default">
-                  <p class="description ftb-inner-margin">Card text</p>
-                  <p class="description">Card text</p>
-                  <p class="flavor-text">Card text</p>
+                  <p class="description ftb-inner-margin">Your card's effect..</p>
+                  <p class="flavor-text"></p>
                 </div>
 
                 <div class="frame-stats text-box-color-default">
-                  <p>0/0</p>
+                  <p></p>
                 </div>
-        
+
+                <!--
                 <div class="frame-bottom-info inner-margin">
                   <div class="fbi-left">
                     <p>Creator</p>
@@ -79,6 +79,7 @@
                     &#x99; &amp; &#169; 2023 Nexus: Voidwarpers
                   </div>
                 </div>
+                -->
               </div>
             </div>
           </div>
@@ -90,135 +91,83 @@
           <span class="badge bg-primary mx-1 py-2 px-3 custom-pill-header">User-generated</span>
           <span class="badge bg-primary mx-1 py-2 px-3 custom-pill-header">Digital trading card game</span>
         </div>
-        <h1 class="landing-h1">Imagine it. Create it. Play it.</h1>
-        <h2 class="mb-4">Nexus: Voidwarpers</h2>
-        <p class="mb-4">Nexus uses the <i>magic</i> of generative AI to let the community not only play, but make cards for the game.</p>
+        <h1 class="landing-h1 text-primary">Imagine it.<br>Create it.<br>Play it.</h1>
+        <p class="mb-4 lead font-400 text-black">Nexus: Voidwarpers combines the <i>magic</i> of generative AI with user generated content to create a trading card game where players not only play cards, but make them as well.</p>
         <div class="card-generator-container">
-          <label for="openai-prompt" class="form-label custom-label">Create your first card</label>
-          <textarea id="openai-prompt" name="openai-prompt" rows="4" placeholder="Describe your card idea to generate a card"></textarea>
+          <label for="openai-prompt" class="form-label custom-label">Write a prompt</label>
+          <textarea id="openai-prompt" name="openai-prompt" rows="4" placeholder='For example: "Dragon Mech with destroy effect".'></textarea>
           <button type="button" class="btn btn-primary mt-3 custom-btn">
             Generate Card <i class="bi bi-magic"></i>
           </button>
         </div>
       </div>
     </div>
-    <!-- JUMBOTRON -->
-    <div class="my-5">
-      <div class="p-5 text-center bg-body-tertiary jumbotron">
-        <div class="container py-5">
-          <h1 class="text-body-emphasis">Full-width jumbotron</h1>
-          <p class="col-lg-8 mx-auto lead">
-            This takes the basic jumbotron above and makes its background edge-to-edge with a <code>.container</code> inside to align content. Similar to above, it's been recreated with built-in grid and utility classes.
-          </p>
+  </div>
+
+  <!-- JUMBOTRON -->
+  <div class="my-5">
+    <div class="p-5 text-center bg-body-tertiary d-flex align-items-center justify-content-center jumbotron">
+      <div class="container py-5">
+        <h2 class="text-body-emphasis jumbotron-h2 font-700">Nexus: Voidwarpers</h2>
+        <p class="col-lg-8 mx-auto lead text-black jumbotron-p font-600">
+            Lorem ipsum
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- THE VISION -->
+    <div class="container col-xxl-8 px-4 py-5 border-bottom">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-8 col-sm-6 col-lg-4">
+          <img src="images/cards/blue/Blue-6-Midnight Visitor.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+        </div>
+        <div class="col-lg-8">
+          <h2 class="display-5 fw-bold text-body-emphasis lh-2 mb-3">The Vision</h2>
+          <h3 class="fs-2 text-body-emphasis mt-5">Create, play, earn</h3>
+          <p class="lead font-400">Lorem opsum</p>
+          <h3 class="fs-2 text-body-emphasis mt-4">Community-led TCG</h3>
+          <p class="lead font-400">Lorem opsum</p>
         </div>
       </div>
     </div>
-    <!-- VISION -->
-    <div class="px-4 pt-5 my-5 text-center border-bottom">
-      <h1 class="display-4 fw-bold text-body-emphasis">Game Vision</h1>
-      <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+  
+  <!-- THE GAME -->
+  <div class="container px-4 py-5" id="featured-3">
+    <h2 class="pb-2">The Game</h2>
+    <p class="lead font-400 mb-4">Lorem opsum</p>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      <div class="feature col">
+        <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"></use></svg>
+        </div>
+        <h3 class="fs-2 text-body-emphasis">AI + UGC</h3>
+        <p>Lorem ipsum</p>
       </div>
-      <div class="overflow-hidden" style="max-height: 30vh;">
-        <div class="container px-5">
-          <img src="bootstrap-docs.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
+      <div class="feature col">
+        <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"></use></svg>
         </div>
+        <h3 class="fs-2 text-body-emphasis">Powers</h3>
+        <p>Lorem ipsum</p>
       </div>
-    </div>
-    <div class="p-4 my-2 bg-white rounded section">
-      <div class="row p-3 my-4 row p-3 my-4 section-sub">
-        <div class="col-md-8">
-          <h2>Marketing</h3>
-          <p>Lorem ipsum</p>
+      <div class="feature col">
+        <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"></use></svg>
         </div>
-        <div class="col-md-4">
-          <img class="img-fluid nexus-card-radius shadow" src="" alt="">
-        </div>
-      </div>
-    </div>
-    <!-- MARKETING -->
-    <div class="container px-4 py-5" id="featured-3">
-      <h2 class="pb-2 border-bottom">Features</h2>
-      <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-        <div class="feature col">
-          <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-            <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"></use></svg>
-          </div>
-          <h3 class="fs-2 text-body-emphasis">Featured title</h3>
-          <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-          <a href="#" class="icon-link">
-            Call to action
-            <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
-          </a>
-        </div>
-        <div class="feature col">
-          <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-            <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"></use></svg>
-          </div>
-          <h3 class="fs-2 text-body-emphasis">Featured title</h3>
-          <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-          <a href="#" class="icon-link">
-            Call to action
-            <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
-          </a>
-        </div>
-        <div class="feature col">
-          <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-            <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"></use></svg>
-          </div>
-          <h3 class="fs-2 text-body-emphasis">Featured title</h3>
-          <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-          <a href="#" class="icon-link">
-            Call to action
-            <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
-          </a>
-        </div>
+        <h3 class="fs-2 text-body-emphasis">Warping</h3>
+        <p>Lorem ipsum</p>
       </div>
     </div>
-    <!-- TEAM -->
-    <div class="px-4 pt-5 my-5 text-center border-bottom">
-      <h1 class="display-4 fw-bold text-body-emphasis">Centered screenshot</h1>
-      <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
-        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-          <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Primary button</button>
-          <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
-        </div>
+  </div>
+
+  <!-- JUMBOTRON 2 -->
+  <div class="mt-5 mb-0">
+    <div class="p-5 text-center bg-body-tertiary d-flex align-items-start justify-content-center jumbotron-lg">
+      <div class="container py-5">
+        <h2 class="text-body-emphasis jumbotron-h2 font-700 mb-5">Join Nexus.<br><a href="https://discord.gg/cBkYUbsMKk" target="_blank">Join the Discord.</a></h2>
+        <iframe src="https://discord.com/widget?id=1136652718929362985&theme=dark" width="350" height="400" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
       </div>
-      <div class="overflow-hidden" style="max-height: 30vh;">
-        <div class="container px-5">
-          <img src="bootstrap-docs.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
-        </div>
-      </div>
-    </div>
-    <div class="p-4 my-2 bg-white rounded section">
-      <div class="row p-3 my-4 row p-3 my-4 section-sub">
-        <div class="col-md-8">
-          <h2>Marketing</h3>
-          <p>Lorem ipsum</p>
-        </div>
-        <div class="col-md-4">
-          <img class="img-fluid nexus-card-radius shadow" src="" alt="">
-        </div>
-      </div>
-    </div>
-    <!-- FOOTER -->
-    <div class="container">
-      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <p class="col-md-4 mb-0 text-body-secondary">© 2023 Company, Inc</p>
-    
-        <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-          <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-        </a>
-    
-        <ul class="nav col-md-4 justify-content-end">
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
-        </ul>
-      </footer>
     </div>
   </div>
   

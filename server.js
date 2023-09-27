@@ -30,19 +30,21 @@ function convertToCardData(generatedText) {
   try {
     console.log("Generated Text:", generatedText);
     const cardData = JSON.parse(generatedText);
+    console.log("Parsed Card Data:", cardData);
     cardData["Card Text"] = Array.isArray(cardData["Card Text"]) ? cardData["Card Text"] : [cardData["Card Text"]];
     return cardData;
   } catch (error) {
     console.error("Error parsing generated text:", error);
     return {
-      "Card Color": "Blue",
+      "Card Color": "Red",
       "Card Name": "Cybernetic Dragon",
-      "Card Energy Cost": "{2}{Y}",
+      "Card Energy Cost": "{2}{R}{R}",
       "Card Type": "Entity — Dragon Mech",
       "Card Grade": "Rare",
-      "Card Text": ["Deploy — Do something", "Flight"],
+      "Card Text": ["Flight <i>(This entity can’t be defended except by entities with flight or intercept.)</i>", "Rapid <i>(This entity can attack and tap the turn it comes under your control.)</i>", "Deploy — Mecha Dragon deal 2 damage to any target. <i>(This triggers whenever this card enters the battlezone.)</i>"],
       "Card Stats": "4/4",
-      "Card Art": "A dragon mech with a cybernetic body and wings."
+      "Card Art": "A dragon mech with a cybernetic body and wings.",
+      "Flavor Text": "It soars through the sky, with metal wings."
     };
   }
 }
@@ -56,7 +58,7 @@ Objective: Generate an original Nexus: Voidwarpers card that strictly aligns wit
 Game rules: https://nexus-voidwarpers.nilswestgardh.repl.co/rules.html
 Inspiration/reference: Existing Nexus: Voidwarper cards: https://nexus-voidwarpers.nilswestgardh.repl.co/cards.html
 Existing Nexus cards: https://nexus-voidwarpers-1.nilswestgardh.repl.co/cards.html
-Avoid: Do NOT use mechanics or syntax from other TCGs like MTG and Hearthstone. Do NOT invent new keywords or mechanics NOT found in Nexus: Voidwarpers game rules. Do NOT include an explanation.
+Avoid: Do NOT use game mechanics, keyword abilities, or anything else from Magic: the Gathering, or Hearthstone. Do NOT invent new keywords or mechanics NOT found in Nexus: Voidwarpers game rules. Do NOT include an explanation.
 Format: Return a JSON object with the following keys:
 
       "Card Color": "[Color]",
@@ -66,7 +68,8 @@ Format: Return a JSON object with the following keys:
       "Card Grade": "[Grade]",
       "Card Text": ["[Ability/effect]", "[Ability/effect]", "[Ability/effect]"],
       "Card Stats": "[Stats]",
-      "Card Art": "[Art description / DALL-E prompt]"
+      "Card Art": "[Art description / DALL-E prompt]",
+      "Flavor Text": "[Flavor text]"
 
       Example:
       "Card Color": "Blue",
@@ -76,7 +79,8 @@ Format: Return a JSON object with the following keys:
       "Card Grade": "Rare",
       "Card Text": ["Deploy — Do something", "Flight"],
       "Card Stats": "4/4",
-      "Card Art": "A dragon mech with a cybernetic body and wings."
+      "Card Art": "A dragon mech with a cybernetic body and wings.",
+      "Flavor Text": "It soars through the sky, with metal wings."
   `;
 
   const finalPrompt = `${predefinedPrompt}\nUser Input: ${userPrompt}`;
@@ -107,7 +111,7 @@ Format: Return a JSON object with the following keys:
     });
 
     const data = await response.json();
-    console.log("OpenAI API Response:", data);
+    console.log("OpenAI API Response:", JSON.stringify(data, null, 2));
     const generatedText = data.choices[0].message.content.trim();
     const cardData = convertToCardData(generatedText);
 
