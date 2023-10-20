@@ -41,9 +41,9 @@ function convertToCardData(generatedText) {
       "Card Energy Cost": "{2}{R}{R}",
       "Card Type": "Entity — Dragon Mech",
       "Card Grade": "Rare",
-      "Card Text": ["Flight <i>(This entity can’t be defended except by entities with flight or intercept.)</i>", "Rapid <i>(This entity can attack and tap the turn it comes under your control.)</i>", "Deploy — Mecha Dragon deal 2 damage to any target. <i>(This triggers whenever this card enters the battlezone.)</i>"],
+      "Card Text": ["Flight (This entity can’t be defended except by entities with flight or intercept.)", "Rapid (This entity can attack and tap the turn it comes under your control.)", "Deploy — Mecha Dragon deal 2 damage to any target. (This triggers whenever this card enters the battlezone.)"],
       "Card Stats": "4/4",
-      "Card Art": "A dragon mech with a cybernetic body and wings.",
+      "Card Art": "Concept art, digital art, sci-fi, fantasy. A dragon mech with a cybernetic body and wings.",
       "Flavor Text": "It soars through the sky, with metal wings."
     };
   }
@@ -55,10 +55,10 @@ app.post('/generate-card', async (req, res) => {
   const predefinedPrompt = `
 Role: You're an expert TCG game designer.
 Objective: Generate an original Nexus: Voidwarpers card that strictly aligns with the game's existing rules and mechanics.
-Game rules: https://nexus-voidwarpers.nilswestgardh.repl.co/rules.html
-Inspiration/reference: Existing Nexus: Voidwarper cards: https://nexus-voidwarpers.nilswestgardh.repl.co/cards.html
-Existing Nexus cards: https://nexus-voidwarpers-1.nilswestgardh.repl.co/cards.html
+Game rules: https://www.play.nexus/rules.html
+Inspiration/reference: Existing Nexus: Voidwarper cards: https://www.play.nexus/cards.html
 Avoid: Do NOT use game mechanics, keyword abilities, or anything else from Magic: the Gathering, or Hearthstone. Do NOT invent new keywords or mechanics NOT found in Nexus: Voidwarpers game rules. Do NOT include an explanation.
+Do: When including keywords, also include its oracle text in parentheses. Example: "Steadfast (This entity can attack without tapping.)""
 Format: Return a JSON object with the following keys:
 
       "Card Color": "[Color]",
@@ -68,7 +68,7 @@ Format: Return a JSON object with the following keys:
       "Card Grade": "[Grade]",
       "Card Text": ["[Ability/effect]", "[Ability/effect]", "[Ability/effect]"],
       "Card Stats": "[Stats]",
-      "Card Art": "[Art description / DALL-E prompt]",
+      "Card Art": "Concept art, digital art, sci-fi, fantasy. [Art description / DALL-E prompt]",
       "Flavor Text": "[Flavor text]"
 
       Example:
@@ -79,7 +79,7 @@ Format: Return a JSON object with the following keys:
       "Card Grade": "Rare",
       "Card Text": ["Deploy — Do something", "Flight"],
       "Card Stats": "4/4",
-      "Card Art": "A dragon mech with a cybernetic body and wings.",
+      "Card Art": "Concept art, digital art, sci-fi, fantasy. A dragon mech with a cybernetic body and wings.",
       "Flavor Text": "It soars through the sky, with metal wings."
   `;
 
@@ -120,8 +120,8 @@ Format: Return a JSON object with the following keys:
     const artDescription = cardData["Card Art"];
 
     // Your custom instructions
-    const customInstructions = "Artstation style, trading card game style, sci-fi, fantasy, digital painting. ";
-    
+    const customInstructions = "Concept art, digital art, illustration, sci-fi, fantasy. Rule of thirds, dramatic mood, dynamic pose. ";
+
     // Fetch image from DALL-E
     const imageResponse = await fetch('https://api.openai.com/v1/images/generations', {
       method: 'POST',

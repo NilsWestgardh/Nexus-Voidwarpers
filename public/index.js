@@ -1,15 +1,11 @@
 console.log("Script loaded");
 
-document.addEventListener("DOMContentLoaded", function() {
-  console.log("DOM fully loaded and parsed");
-});
-
-function mapMTGToNexus(term) {
+function mapToNexus(term) {
   const termMap = {
     // Colors
     'White': 'Yellow',
     'Black': 'Purple',
-    
+
     // Card Types
     'Sorcery': 'Sequence',
     'Instant': 'Interrupt',
@@ -17,7 +13,7 @@ function mapMTGToNexus(term) {
     'Aura': 'Augmentation',
     'Artifact': 'Machine',
     'Vehicle': 'Craft',
-    'Equipment': 'Weapon',
+    'Equipment': 'Rig',
     'Creature': 'Entity',
     'Minion': 'Entity',
     'Planeswalker': 'Voidwarper',
@@ -86,11 +82,12 @@ function mapMTGToNexus(term) {
     'Create': 'Spawn',
     'Life': 'Health',
     'Counter target': 'Cancel target',
-    'Equip': 'Arm',
+    'Equip': 'Rig',
     'Enchant': 'Augment',
     'Gain control': 'Take control',
     'Fight': 'Brawl',
-    'Mill': 'Erase'
+    'Exile target': 'Expel target',
+    'Mill': 'Null'
   };
 
   return termMap[term] || term;
@@ -121,15 +118,15 @@ function updateCard(cardData) {
   console.log(cardData)
 
   function clearCard() {
-  document.querySelector('.card-name').textContent = '';
-  document.querySelector('.card-cost').innerHTML = '';
-  document.querySelector('.card-type').textContent = '';
-  document.querySelector('.card-set-icon').src = '';
-  document.querySelector('.frame-text-box').innerHTML = '';
-  document.querySelector('.frame-stats p').textContent = '';
-  document.querySelector('.frame-art img').src = '';
-}
-  
+    document.querySelector('.card-name').textContent = '';
+    document.querySelector('.card-cost').innerHTML = '';
+    document.querySelector('.card-type').textContent = '';
+    document.querySelector('.card-set-icon').src = '';
+    document.querySelector('.frame-text-box').innerHTML = '';
+    document.querySelector('.frame-stats p').textContent = '';
+    document.querySelector('.frame-art img').src = '';
+  }
+
   // Update card color background
   const cardBackground = document.querySelector('.card-background');
   cardBackground.className = `card-background card-bg-${cardData["Card Color"].toLowerCase()}`;
@@ -143,19 +140,19 @@ function updateCard(cardData) {
   cardCost.innerHTML = '';  // Clear existing cost icons
   const energyCost = cardData["Card Energy Cost"];
   if (energyCost && energyCost.match(/\{[0-9A-Z]+\}/g)) {
-  energyCost.match(/\{[0-9A-Z]+\}/g).forEach(icon => {
-    const mappedEnergy = mapEnergyToFile(icon.replace(/[{}]/g, ''));
-    
-    // Skip adding the Number=0.png image
-    if (mappedEnergy !== 'Number=0') {
-      const img = document.createElement('img');
-      img.className = 'img-fluid card-cost-icon';
-      img.src = `images/icons/Energy=${mappedEnergy}.png`;
-      cardCost.appendChild(img);
-    }
-  });
+    energyCost.match(/\{[0-9A-Z]+\}/g).forEach(icon => {
+      const mappedEnergy = mapEnergyToFile(icon.replace(/[{}]/g, ''));
+
+      // Skip adding the Number=0.png image
+      if (mappedEnergy !== 'Number=0') {
+        const img = document.createElement('img');
+        img.className = 'img-fluid card-cost-icon';
+        img.src = `images/icons/Energy=${mappedEnergy}.png`;
+        cardCost.appendChild(img);
+      }
+    });
   }
-  
+
   // Update card type
   const cardType = document.querySelector('.card-type');
   cardType.textContent = cardData["Card Type"];
@@ -177,12 +174,12 @@ function updateCard(cardData) {
       newParagraph.className += ' ftb-inner-margin'; // Add margin to the first paragraph
     }
     // Convert MTG terms to Nexus terms
-    const convertedText = text.split(' ').map(word => mapMTGToNexus(word)).join(' ');
+    const convertedText = text.split(' ').map(word => mapToNexus(word)).join(' ');
 
     newParagraph.innerText = convertedText;
     cardTextBox.appendChild(newParagraph);
   });
-  
+
   // If less than 4 paragraphs, add flavor text
   if (cardTextArray.length < 4) {
     const flavorTextParagraph = document.createElement('p');
@@ -207,8 +204,17 @@ function updateCard(cardData) {
   cardArt.src = cardData["Card Art"] ? cardData["Card Art"] : 'images/nexus-card-default-art.png';
 }
 
+// Get button
+const button = document.getElementById("generateCardButton");
+const spinner = document.querySelector(".spinner");
+
 // Function to generate a card
 async function generateCard() {
+
+  // Disable the button and show the spinner
+  button.disabled = true;
+  spinner.style.display = "inline-block";
+
   console.log("Generating card...");
   // Get the prompt from the input field
   const prompt = document.getElementById("openai-prompt").value;
@@ -227,6 +233,11 @@ async function generateCard() {
 
   // Update the card on the webpage
   updateCard(data);
+
+  // Enable the button and hide the spinner
+  button.disabled = false;
+  spinner.style.display = "none";
+
   console.log("Card generated and updated.");
 }
 
