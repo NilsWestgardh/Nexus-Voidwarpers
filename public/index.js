@@ -1,5 +1,9 @@
 console.log("Script loaded");
 
+document.addEventListener("DOMContentLoaded", async function() {
+  console.log("DOM fully loaded and parsed");
+});
+
 function mapToNexus(term) {
   const termMap = {
     // Colors
@@ -113,20 +117,24 @@ function mapEnergyToFile(energy) {
   return energyMap[energy] || energy;
 }
 
+// Function to clear the card
+function clearCard() {
+  document.querySelector('.card-name').textContent = '';
+  document.querySelector('.card-cost').innerHTML = '';
+  document.querySelector('.card-type').textContent = '';
+  document.querySelector('.card-set-icon').src = '';
+  document.querySelector('.frame-text-box').innerHTML = '';
+  document.querySelector('.frame-stats p').textContent = '';
+  document.querySelector('.frame-art img').src = '';
+}
+
 // Function to update the card
 function updateCard(cardData) {
   console.log(cardData)
 
-  function clearCard() {
-    document.querySelector('.card-name').textContent = '';
-    document.querySelector('.card-cost').innerHTML = '';
-    document.querySelector('.card-type').textContent = '';
-    document.querySelector('.card-set-icon').src = '';
-    document.querySelector('.frame-text-box').innerHTML = '';
-    document.querySelector('.frame-stats p').textContent = '';
-    document.querySelector('.frame-art img').src = '';
-  }
-
+  // Clear card
+  clearCard();
+  
   // Update card color background
   const cardBackground = document.querySelector('.card-background');
   cardBackground.className = `card-background card-bg-${cardData["Card Color"].toLowerCase()}`;
@@ -204,14 +212,13 @@ function updateCard(cardData) {
   cardArt.src = cardData["Card Art"] ? cardData["Card Art"] : 'images/nexus-card-default-art.png';
 }
 
-// Get button
-const button = document.getElementById("generateCardButton");
-const spinner = document.querySelector(".spinner");
-
 // Function to generate a card
 async function generateCard() {
+  // Get spinner element and button element
+  const spinner = document.querySelector(".spinner");
+  const button = document.getElementById("generateCardButton");
 
-  // Disable the button and show the spinner
+  // Disable the button and show spinner
   button.disabled = true;
   spinner.style.display = "inline-block";
 
@@ -219,29 +226,32 @@ async function generateCard() {
   // Get the prompt from the input field
   const prompt = document.getElementById("openai-prompt").value;
 
-  // Send a POST request to the server with the prompt
-  const response = await fetch('/generate-card', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ prompt }),
-  });
+  try {
+    // Send a POST request to the server with the prompt
+    const response = await fetch('/generate-card', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ prompt }),
+    });
 
-  // Parse the JSON response
-  const data = await response.json();
+    // Parse the JSON response
+    const data = await response.json();
 
-  // Update the card on the webpage
-  updateCard(data);
-
-  // Enable the button and hide the spinner
-  button.disabled = false;
-  spinner.style.display = "none";
-
-  console.log("Card generated and updated.");
+    // Update the card on the webpage
+    updateCard(data);
+    console.log("Card generated and updated.");
+  } catch (error) {
+    console.error("An error occurred while generating the card:", error);
+  } finally {
+    // Hide spinner and re-enable button regardless of the outcome
+    spinner.style.display = "none";
+    button.disabled = false;
+  }
 }
 
 // Attach the function to the button
-document.querySelector(".custom-btn").addEventListener("click", async () => {
+document.querySelector("#generateCardButton").addEventListener("click", async () => {
   await generateCard();
 });
