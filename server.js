@@ -120,7 +120,10 @@ Format: Return a JSON object with the following keys:
     const artDescription = cardData["Card Art"];
 
     // Your custom instructions
-    const customInstructions = "Concept art, digital art, illustration, sci-fi, fantasy. Rule of thirds, dramatic mood, dynamic pose. ";
+    const artStyle = "Concept art, digital art, illustration, sci-fi, fantasy";
+
+    // Your custom instructions
+    const artComposition = "Rule of thirds, dramatic mood, dynamic pose";
 
     // Fetch image from DALL-E
     const imageResponse = await fetch('https://api.openai.com/v1/images/generations', {
@@ -131,7 +134,7 @@ Format: Return a JSON object with the following keys:
       },
       body: JSON.stringify({
         model: "dall-e-3",
-        prompt: `${artDescription}. ${customInstructions}`,
+        prompt: `${artStyle}. ${artDescription}. ${artComposition}.`,
         n: 1  // Number of images you want to generate
       })
     });
