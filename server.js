@@ -130,6 +130,7 @@ Format: Return a JSON object with the following keys:
         'Authorization': `Bearer ${apiKey}`
       },
       body: JSON.stringify({
+        model: "dall-e-3",
         prompt: `${artDescription}. ${customInstructions}`,
         n: 1  // Number of images you want to generate
       })
